@@ -65,6 +65,7 @@ export function Navbar({ onOpenDemo, currentView = 'home', onNavigate }: NavbarP
       items: [
         { title: 'About Us', view: 'about' as const },
         { title: 'Our Story', view: 'story' as const },
+        { title: 'Supporting Students', view: 'why-students' as const },
       ]
     },
     {
