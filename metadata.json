@@ -1,0 +1,6 @@
+{
+  "name": "Jakarta Minimalist Landing Page",
+  "description": "A pristine, high-contrast landing page featuring ultra-clean white surfaces, Plus Jakarta Sans typography, and clear, structured product sections.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
