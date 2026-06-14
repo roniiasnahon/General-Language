@@ -29,6 +29,32 @@ export default function App() {
   React.useEffect(() => {
     window.location.hash = currentView;
     window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Dynamically update document title based on view
+    let title = 'General Language — Workspace Orchestration';
+    if (currentView === 'download') {
+      title = 'Download Cosmi — General Language';
+    } else if (currentView === 'terms') {
+      title = 'Terms of Use — General Language';
+    } else if (currentView === 'privacy') {
+      title = 'Privacy Policy — General Language';
+    } else if (currentView === 'blog') {
+      title = 'Blog — General Language';
+    } else if (currentView === 'story') {
+      title = 'Our Story — General Language';
+    } else if (currentView === 'about') {
+      title = 'About Us — General Language';
+    } else if (currentView === 'compliance') {
+      title = 'Compliance & Standards — General Language';
+    } else if (currentView.startsWith('blog-post/')) {
+      const slug = currentView.replace('blog-post/', '');
+      const formattedSlug = slug
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      title = `${formattedSlug} — General Language`;
+    }
+    document.title = title;
   }, [currentView]);
 
   React.useEffect(() => {
