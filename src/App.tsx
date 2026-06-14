@@ -13,13 +13,14 @@ import { BlogPostPage } from './components/BlogPostPage';
 import { StoryPage } from './components/StoryPage';
 import { AboutPage } from './components/AboutPage';
 import { CompliancePage } from './components/CompliancePage';
+import { WhyStudentsPage } from './components/WhyStudentsPage';
 import { motion } from 'motion/react';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | `blog-post/${string}`>(() => {
+  const [currentView, setCurrentView] = useState<'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | `blog-post/${string}`>(() => {
     if (typeof window !== 'undefined' && window.location.hash) {
       const hash = window.location.hash.replace('#', '') as any;
-      if (['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance'].includes(hash) || String(hash).startsWith('blog-post/')) {
+      if (['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students'].includes(hash) || String(hash).startsWith('blog-post/')) {
         return hash;
       }
     }
@@ -46,6 +47,8 @@ export default function App() {
       title = 'About Us — General Language';
     } else if (currentView === 'compliance') {
       title = 'Compliance & Standards — General Language';
+    } else if (currentView === 'why-students') {
+      title = 'Why We Help Students — General Language';
     } else if (currentView.startsWith('blog-post/')) {
       const slug = currentView.replace('blog-post/', '');
       const formattedSlug = slug
@@ -60,7 +63,7 @@ export default function App() {
   React.useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '') as any;
-      if (['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance'].includes(hash) || String(hash).startsWith('blog-post/')) {
+      if (['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students'].includes(hash) || String(hash).startsWith('blog-post/')) {
         setCurrentView(hash);
       }
     };
@@ -95,6 +98,8 @@ export default function App() {
         <AboutPage />
       ) : currentView === 'compliance' ? (
         <CompliancePage />
+      ) : currentView === 'why-students' ? (
+        <WhyStudentsPage />
       ) : currentView.startsWith('blog-post/') ? (
         <BlogPostPage slug={currentView.replace('blog-post/', '')} />
       ) : (
