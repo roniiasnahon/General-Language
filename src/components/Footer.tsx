@@ -64,8 +64,23 @@ function Footer({ onNavigate }: FooterProps) {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-zinc-800 hover:text-black">
-                    Use Cases
+                  <a href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('about'); }} className="text-zinc-800 hover:text-black">
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('story'); }} className="text-zinc-800 hover:text-black">
+                    Our Story
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('why-students'); }} className="text-zinc-800 hover:text-black">
+                    Supporting Students
+                  </a>
+                </li>
+                <li>
+                  <a href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('compliance'); }} className="text-zinc-800 hover:text-black">
+                    Compliance Group
                   </a>
                 </li>
               </ul>
