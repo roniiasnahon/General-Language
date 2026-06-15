@@ -58,6 +58,7 @@ export function Navbar({ onOpenDemo, currentView = 'home', onNavigate }: NavbarP
       category: 'Platform',
       items: [
         { title: 'Cosmi', view: 'download' as const },
+        { title: 'AI Engines', view: 'llm-learning' as const },
       ]
     },
     {
