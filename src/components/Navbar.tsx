@@ -120,7 +120,12 @@ export function Navbar({ onOpenDemo, currentView = 'home', onNavigate }: NavbarP
             </div>
 
             {/* Desktop Navigation Links - Editorial Uppercase Tracking-Widest */}
-            <div className="hidden md:flex items-center space-x-10">
+            <div className="hidden md:flex flex-1 justify-end items-center pr-8 lg:pr-12 space-x-6 lg:space-x-10">
+              <button onClick={() => onNavigate?.('policies')} className="text-xs font-bold uppercase tracking-widest text-zinc-800 hover:text-black hover:opacity-70 transition-opacity">Policies</button>
+              <button onClick={() => onNavigate?.('suggestions')} className="text-xs font-bold uppercase tracking-widest text-zinc-800 hover:text-black hover:opacity-70 transition-opacity">Suggestions</button>
+              <button onClick={() => onNavigate?.('releases')} className="text-xs font-bold uppercase tracking-widest text-zinc-800 hover:text-black hover:opacity-70 transition-opacity">Releases</button>
+              <button onClick={() => onNavigate?.('blog')} className="text-xs font-bold uppercase tracking-widest text-zinc-800 hover:text-black hover:opacity-70 transition-opacity">Blog</button>
+              <button onClick={() => onNavigate?.('use-cases')} className="text-xs font-bold uppercase tracking-widest text-zinc-800 hover:text-black hover:opacity-70 transition-opacity">Use Cases</button>
             </div>
 
             {/* CTA Buttons - Pure Editorial Style with Zero Glows and Soft Curved borders */}
@@ -259,6 +264,15 @@ export function Navbar({ onOpenDemo, currentView = 'home', onNavigate }: NavbarP
                     </motion.div>
                   )}
                 </AnimatePresence>
+              </div>
+
+              <div className="h-px bg-zinc-200/40 my-1" />
+              <div className="flex flex-col gap-2 px-2 pb-2">
+                <button onClick={() => { setIsOpen(false); onNavigate?.('policies'); }} className="w-full text-left py-2 font-sans text-xs font-bold uppercase tracking-widest text-zinc-800 hover:opacity-50">Policies</button>
+                <button onClick={() => { setIsOpen(false); onNavigate?.('suggestions'); }} className="w-full text-left py-2 font-sans text-xs font-bold uppercase tracking-widest text-zinc-800 hover:opacity-50">Suggestions</button>
+                <button onClick={() => { setIsOpen(false); onNavigate?.('releases'); }} className="w-full text-left py-2 font-sans text-xs font-bold uppercase tracking-widest text-zinc-800 hover:opacity-50">Releases</button>
+                <button onClick={() => { setIsOpen(false); onNavigate?.('blog'); }} className="w-full text-left py-2 font-sans text-xs font-bold uppercase tracking-widest text-zinc-800 hover:opacity-50">Blog</button>
+                <button onClick={() => { setIsOpen(false); onNavigate?.('use-cases'); }} className="w-full text-left py-2 font-sans text-xs font-bold uppercase tracking-widest text-zinc-800 hover:opacity-50">Use Cases</button>
               </div>
 
               <div className="h-px bg-zinc-200/40 my-1" />
