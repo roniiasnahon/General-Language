@@ -18,6 +18,13 @@ export function BlogPage() {
     <div className="bg-[#FAF6EE] text-zinc-900 min-h-screen font-sans selection:bg-zinc-950 selection:text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         
+        {/* Breadcrumb */}
+        <nav className="mb-12 flex items-center gap-2 text-sm text-zinc-500 font-medium font-sans" aria-label="Breadcrumb">
+          <a href="#home" className="hover:text-zinc-950 transition-colors">Home</a>
+          <span className="text-zinc-300 select-none">/</span>
+          <span className="text-zinc-900" aria-current="page">Blog</span>
+        </nav>
+
         {/* Featured Section */}
         <motion.div 
           initial={{ opacity: 0 }}
