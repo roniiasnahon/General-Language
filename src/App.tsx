@@ -15,13 +15,20 @@ import { AboutPage } from './components/AboutPage';
 import { CompliancePage } from './components/CompliancePage';
 import { WhyStudentsPage } from './components/WhyStudentsPage';
 import { LLMModelsPage } from './components/LLMModelsPage';
+import { PoliciesPage } from './components/PoliciesPage';
+import { SuggestionsPage } from './components/SuggestionsPage';
+import { ReleasesPage } from './components/ReleasesPage';
+import { UseCasesPage } from './components/UseCasesPage';
 import { motion } from 'motion/react';
 
+type MainViews = 'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | 'policies' | 'suggestions' | 'releases' | 'use-cases';
+const validViews: MainViews[] = ['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning', 'policies', 'suggestions', 'releases', 'use-cases'];
+
 export default function App() {
-  const [currentView, setCurrentView] = useState<'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | `blog-post/${string}`>(() => {
+  const [currentView, setCurrentView] = useState<MainViews | `blog-post/${string}`>(() => {
     if (typeof window !== 'undefined' && window.location.hash) {
       const hash = window.location.hash.replace('#', '') as any;
-      if (['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning'].includes(hash) || String(hash).startsWith('blog-post/')) {
+      if (validViews.includes(hash) || String(hash).startsWith('blog-post/')) {
         return hash;
       }
     }
@@ -52,6 +59,14 @@ export default function App() {
       title = 'Why We Help Students — General Language';
     } else if (currentView === 'llm-learning') {
       title = 'AI Orchestration Engine — General Language';
+    } else if (currentView === 'policies') {
+      title = 'Policies — General Language';
+    } else if (currentView === 'suggestions') {
+      title = 'Suggestions — General Language';
+    } else if (currentView === 'releases') {
+      title = 'Releases — General Language';
+    } else if (currentView === 'use-cases') {
+      title = 'Use Cases — General Language';
     } else if (currentView.startsWith('blog-post/')) {
       const slug = currentView.replace('blog-post/', '');
       const formattedSlug = slug
@@ -66,7 +81,7 @@ export default function App() {
   React.useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '') as any;
-      if (['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning'].includes(hash) || String(hash).startsWith('blog-post/')) {
+      if (validViews.includes(hash) || String(hash).startsWith('blog-post/')) {
         setCurrentView(hash);
       }
     };
@@ -105,6 +120,14 @@ export default function App() {
         <WhyStudentsPage />
       ) : currentView === 'llm-learning' ? (
         <LLMModelsPage />
+      ) : currentView === 'policies' ? (
+        <PoliciesPage />
+      ) : currentView === 'suggestions' ? (
+        <SuggestionsPage />
+      ) : currentView === 'releases' ? (
+        <ReleasesPage />
+      ) : currentView === 'use-cases' ? (
+        <UseCasesPage />
       ) : currentView.startsWith('blog-post/') ? (
         <BlogPostPage slug={currentView.replace('blog-post/', '')} />
       ) : (
