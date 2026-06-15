@@ -65,10 +65,12 @@ export function StoryPage() {
           {/* Chapter 1 */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
             <div className="md:col-span-4">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
-                The Challenge
-              </h2>
-              <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Redefining the classroom</p>
+              <div className="sticky top-32">
+                <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
+                  The Challenge
+                </h2>
+                <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Redefining the classroom</p>
+              </div>
             </div>
             <div className="md:col-span-8 text-zinc-700 leading-relaxed space-y-6 font-sans text-base md:text-[17px]">
               <p>
@@ -91,10 +93,12 @@ export function StoryPage() {
           {/* Chapter 2 */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
             <div className="md:col-span-4">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
-                An Easier Approach
-              </h2>
-              <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Breaking down barriers</p>
+              <div className="sticky top-32">
+                <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
+                  An Easier Approach
+                </h2>
+                <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Breaking down barriers</p>
+              </div>
             </div>
             <div className="md:col-span-8 text-zinc-700 leading-relaxed space-y-6 font-sans text-base md:text-[17px]">
               <p>
@@ -117,10 +121,12 @@ export function StoryPage() {
           {/* Chapter 3 */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
             <div className="md:col-span-4">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
-                Looking Ahead
-              </h2>
-              <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Joyful learning</p>
+              <div className="sticky top-32">
+                <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
+                  Looking Ahead
+                </h2>
+                <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Joyful learning</p>
+              </div>
             </div>
             <div className="md:col-span-8 text-zinc-700 leading-relaxed space-y-6 font-sans text-base md:text-[17px]">
               <p>
