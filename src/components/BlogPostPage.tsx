@@ -13,6 +13,17 @@ export function BlogPostPage({ slug }: { slug?: string }) {
   return (
     <div className="bg-[#FAF6EE] text-zinc-900 min-h-screen font-sans selection:bg-zinc-950 selection:text-white pb-24">
       <article className="pt-24 md:pt-32">
+        {/* Breadcrumb */}
+        <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex items-center gap-2 text-sm text-zinc-500 font-medium font-sans" aria-label="Breadcrumb">
+          <a href="#home" className="hover:text-zinc-950 transition-colors">Home</a>
+          <span className="text-zinc-300 select-none">/</span>
+          <a href="#blog" className="hover:text-zinc-950 transition-colors">Blog</a>
+          <span className="text-zinc-300 select-none">/</span>
+          <span className="text-zinc-900 truncate max-w-[180px] sm:max-w-xs md:max-w-md" aria-current="page">
+            {post.title}
+          </span>
+        </nav>
+
         {/* Header */}
         <header className="max-w-4xl mx-auto px-4 text-center mb-12">
           {(post.category || post.date) && (
