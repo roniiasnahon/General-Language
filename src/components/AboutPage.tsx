@@ -111,16 +111,18 @@ export function AboutPage() {
 
       {/* Classic Architectural Grid Section 1: Our Purpose */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 shrink-0">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start font-sans">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 font-sans">
           
           {/* Left Column: Our Purpose */}
-          <div className="lg:col-span-5 space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-950">
-              Our Purpose
-            </h2>
-            <p className="text-xl md:text-2xl text-zinc-800 font-medium leading-relaxed">
-              We believe education should be a source of wonder, not stress. We are dedicated to building interfaces that students love, simplifying complex subjects so they can gain profound confidence and a lifelong draw to education.
-            </p>
+          <div className="lg:col-span-5">
+            <div className="sticky top-32 space-y-6">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-950">
+                Our Purpose
+              </h2>
+              <p className="text-xl md:text-2xl text-zinc-800 font-medium leading-relaxed">
+                We believe education should be a source of wonder, not stress. We are dedicated to building interfaces that students love, simplifying complex subjects so they can gain profound confidence and a lifelong draw to education.
+              </p>
+            </div>
           </div>
 
           {/* Right Columns: Styled Grid Blocks */}
@@ -174,16 +176,18 @@ export function AboutPage() {
 
       {/* Classic Architectural Grid Section 2: Our Philosophy */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 shrink-0 font-sans">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
           {/* Left Column: Our Philosophy */}
-          <div className="lg:col-span-5 space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-950">
-              Our Philosophy
-            </h2>
-            <p className="text-xl md:text-2xl text-zinc-805 font-medium leading-relaxed">
-              We want to make studying genuinely fun, highly engaging, and deeply attractive. When learning feels like an adventure of discovery rather than a test-taking chore, student retention naturally climbs.
-            </p>
+          <div className="lg:col-span-5">
+            <div className="sticky top-32 space-y-6">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-950">
+                Our Philosophy
+              </h2>
+              <p className="text-xl md:text-2xl text-zinc-805 font-medium leading-relaxed">
+                We want to make studying genuinely fun, highly engaging, and deeply attractive. When learning feels like an adventure of discovery rather than a test-taking chore, student retention naturally climbs.
+              </p>
+            </div>
           </div>
 
           {/* Right Column: Styled Grid Blocks */}
@@ -237,16 +241,18 @@ export function AboutPage() {
 
       {/* Classic Architectural Grid Section 3: Our Research */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-6 shrink-0 font-sans">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
           {/* Left Column: Our Research */}
-          <div className="lg:col-span-5 space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-955 block">
-              Our Research
-            </h2>
-            <p className="text-xl md:text-2xl text-zinc-805 font-medium leading-relaxed">
-              Developing delightful tools requires deliberate cognitive science. We work alongside designers and educators to map raw human curiosity directly onto fluid, digital environments.
-            </p>
+          <div className="lg:col-span-5">
+            <div className="sticky top-32 space-y-6">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-955 block">
+                Our Research
+              </h2>
+              <p className="text-xl md:text-2xl text-zinc-805 font-medium leading-relaxed">
+                Developing delightful tools requires deliberate cognitive science. We work alongside designers and educators to map raw human curiosity directly onto fluid, digital environments.
+              </p>
+            </div>
           </div>
 
           {/* Right Column: Styled Grid Blocks */}
@@ -300,16 +306,18 @@ export function AboutPage() {
 
       {/* Classic Architectural Grid Section 4: Our Standards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-6 shrink-0 font-sans">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
           {/* Left Column: Our Standards */}
-          <div className="lg:col-span-5 space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[#0F0F0F]">
-              Our Standards
-            </h2>
-            <p className="text-xl md:text-2xl text-zinc-805 font-medium leading-relaxed">
-              We hold ourselves to strict typographic, systemic, and qualitative principles. A student's time is valuable, and human attention deserves pure dignity.
-            </p>
+          <div className="lg:col-span-5">
+            <div className="sticky top-32 space-y-6">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[#0F0F0F]">
+                Our Standards
+              </h2>
+              <p className="text-xl md:text-2xl text-zinc-805 font-medium leading-relaxed">
+                We hold ourselves to strict typographic, systemic, and qualitative principles. A student's time is valuable, and human attention deserves pure dignity.
+              </p>
+            </div>
           </div>
 
           {/* Right Column: Styled Grid Blocks */}
@@ -363,16 +371,18 @@ export function AboutPage() {
 
       {/* Classic Architectural Grid Section 5: Our Team */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24 shrink-0 font-sans">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           
           {/* Left Column: Our Team */}
-          <div className="lg:col-span-5 space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-950">
-              Our Team
-            </h2>
-            <p className="text-xl md:text-2xl text-zinc-805 font-medium leading-relaxed">
-              We are a team of passionate educators, cognitive scientists, and visual designers striving to make intellectual fields accessible to everyone around the world.
-            </p>
+          <div className="lg:col-span-5">
+            <div className="sticky top-32 space-y-6">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-950">
+                Our Team
+              </h2>
+              <p className="text-xl md:text-2xl text-zinc-805 font-medium leading-relaxed">
+                We are a team of passionate educators, cognitive scientists, and visual designers striving to make intellectual fields accessible to everyone around the world.
+              </p>
+            </div>
           </div>
 
           {/* Right Column: Styled Grid Blocks */}
