@@ -69,10 +69,12 @@ export function WhyStudentsPage() {
           {/* Chapter 1 */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
             <div className="md:col-span-4">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
-                Our Core Motivation
-              </h2>
-              <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Why we do what we do</p>
+              <div className="sticky top-32">
+                <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
+                  Our Core Motivation
+                </h2>
+                <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Why we do what we do</p>
+              </div>
             </div>
             <div className="md:col-span-8 text-zinc-700 leading-relaxed space-y-6 font-sans text-base md:text-[17px]">
               <p>
@@ -89,10 +91,12 @@ export function WhyStudentsPage() {
           {/* Chapter 2 */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
             <div className="md:col-span-4">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
-                Abolishing Stress & Fear
-              </h2>
-              <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Fostering emotional safety</p>
+              <div className="sticky top-32">
+                <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
+                  Abolishing Stress & Fear
+                </h2>
+                <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Fostering emotional safety</p>
+              </div>
             </div>
             <div className="md:col-span-8 text-zinc-700 leading-relaxed space-y-6 font-sans text-base md:text-[17px]">
               <p>
@@ -109,10 +113,12 @@ export function WhyStudentsPage() {
           {/* Chapter 3 */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
             <div className="md:col-span-4">
-              <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
-                Intellectual Sovereignty
-              </h2>
-              <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Independent reasoning</p>
+              <div className="sticky top-32">
+                <h2 className="text-2xl font-bold tracking-tight text-zinc-950 font-sans">
+                  Intellectual Sovereignty
+                </h2>
+                <p className="text-zinc-500 font-medium text-sm mt-2 font-sans">Independent reasoning</p>
+              </div>
             </div>
             <div className="md:col-span-8 text-zinc-700 leading-relaxed space-y-6 font-sans text-base md:text-[17px]">
               <p>
