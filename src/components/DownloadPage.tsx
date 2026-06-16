@@ -108,16 +108,115 @@ export function DownloadPage({ onBackToHome }: DownloadPageProps) {
   };
 
   return (
-    <div className="bg-[#FAF6EE] text-zinc-900 min-h-screen font-sans selection:bg-zinc-950 selection:text-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+    <div className="bg-[#FAF6EE] text-zinc-900 min-h-screen font-sans selection:bg-zinc-950 selection:text-white relative overflow-hidden">
+      {/* Decorative Dot Pattern Background */}
+      <div 
+        className="absolute right-0 top-0 w-full md:w-[1200px] h-[800px] md:h-[1200px] opacity-[0.85] pointer-events-none"
+        style={{
+          backgroundImage: 'radial-gradient(circle at center, black 1px, transparent 1px)',
+          backgroundSize: '20px 20px',
+          maskImage: 'radial-gradient(ellipse 100% 100% at 80% 20%, black 10%, transparent 70%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 100% 100% at 80% 20%, black 10%, transparent 70%)'
+        }}
+      />
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-20 relative z-10">
         
+        {/* New Hero Section */}
+        <div className="pt-8 md:pt-16 pb-24 md:pb-32 text-left">
+          <div className="max-w-5xl">
+            <motion.h1 
+              variants={{
+                hidden: { opacity: 1 },
+                visible: {
+                  opacity: 1,
+                  transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+                },
+              }}
+              initial="hidden"
+              animate="visible"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-medium tracking-tight text-zinc-950 leading-[1.05]"
+            >
+              {["Orchestrators", "that", "help"].map((word, i) => (
+                <React.Fragment key={`line1-${i}`}>
+                  <motion.span 
+                    variants={{
+                      hidden: { opacity: 0, y: 30 },
+                      visible: {
+                        opacity: 1, y: 0,
+                        transition: { type: "spring", damping: 14, stiffness: 100 }
+                      }
+                    }}
+                    className="relative inline-block"
+                  >
+                    {word}
+                  </motion.span>
+                  {i < 2 && " "}
+                </React.Fragment>
+              ))}
+
+              <br className="hidden md:block" />
+              <span className="md:hidden"> </span>
+
+              <motion.span
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: {
+                    opacity: 1, y: 0,
+                    transition: { type: "spring", damping: 14, stiffness: 100 }
+                  }
+                }}
+                className="relative inline-block"
+              >
+                  <motion.span
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ 
+                      duration: 0.8, 
+                      delay: 0.6, 
+                      ease: [0.83, 0, 0.17, 1] 
+                    }}
+                    className="absolute bottom-[-0.15em] left-[-0.1em] right-[-0.1em] h-[1.25em] bg-zinc-950 origin-left rounded-sm z-[-1]"
+                  />
+                  <motion.span 
+                    initial={{ color: "#09090b" }}
+                    animate={{ color: "#ffffff" }}
+                    transition={{ duration: 0.3, delay: 0.8 }}
+                    className="relative z-10 px-1"
+                  >
+                    you
+                  </motion.span>
+              </motion.span>
+              {" "}
+
+              {["achieve", "mastery"].map((word, i) => (
+                <React.Fragment key={`line2-${i}`}>
+                  <motion.span 
+                    variants={{
+                      hidden: { opacity: 0, y: 30 },
+                      visible: {
+                        opacity: 1, y: 0,
+                        transition: { type: "spring", damping: 14, stiffness: 100 }
+                      }
+                    }}
+                    className="relative inline-block"
+                  >
+                    {word}
+                  </motion.span>
+                  {i < 1 && " "}
+                </React.Fragment>
+              ))}
+            </motion.h1>
+          </div>
+        </div>
+
         {/* Top Header Row with dynamic headline */}
-        <div className="mb-10 md:mb-14 text-left">
+        <div className="mb-8 md:mb-10 text-left border-t border-zinc-200/65 pt-6 mt-12 md:mt-20">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-zinc-950 leading-[1.08] min-h-[1.2em] select-none">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-950 leading-[1.08] min-h-[1.2em] select-none">
               {typedText}
               <span className="inline-block w-[3px] h-[0.85em] bg-black ml-2 align-middle animate-pulse font-normal" />
-            </h1>
+            </h2>
           </div>
         </div>
 
@@ -127,7 +226,7 @@ export function DownloadPage({ onBackToHome }: DownloadPageProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="space-y-6 pt-4 border-t border-zinc-200/65"
+          className="space-y-6 pt-2"
         >
 
           {/* Desktop Platforms */}
@@ -171,7 +270,7 @@ export function DownloadPage({ onBackToHome }: DownloadPageProps) {
                   onClick={() => handleDownload('https://github.com/roniiasnahon/Tetra/releases/download/v1.0.0/Cosmiwise.Setup.1.0.0.exe', 'Windows')}
                   className="w-full text-center py-4 rounded-xl bg-zinc-950 text-white font-sans text-xs font-bold uppercase tracking-widest hover:bg-zinc-800 transition-colors cursor-pointer"
                 >
-                  Download for x64
+                  Download Cosmi
                 </button>
               </div>
 
@@ -193,7 +292,7 @@ export function DownloadPage({ onBackToHome }: DownloadPageProps) {
                   onClick={() => handleDownload('https://github.com/roniiasnahon/Tetra/releases/download/v1.0.0/cosmiwise-1.0.0.zip', 'Linux')}
                   className="w-full text-center py-4 rounded-xl bg-zinc-950 text-white font-sans text-xs font-bold uppercase tracking-widest hover:bg-zinc-800 transition-colors cursor-pointer"
                 >
-                  Download for x64
+                  Download Cosmi
                 </button>
               </div>
 
