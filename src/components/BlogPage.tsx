@@ -5,10 +5,11 @@ import { blogPosts } from '../data/blogPosts';
 
 export function BlogPage() {
   const [activeCategory, setActiveCategory] = React.useState('All');
-  const featuredPost = blogPosts[0];
-  const listPosts = blogPosts.slice(1);
+  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const featuredPost = sortedPosts[0];
+  const listPosts = sortedPosts.slice(1);
 
-  const categories = ['All', 'Product', 'Technical', 'Enterprise'];
+  const categories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))];
 
   const filteredPosts = activeCategory === 'All' 
     ? listPosts 
