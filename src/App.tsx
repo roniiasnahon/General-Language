@@ -19,10 +19,11 @@ import { PoliciesPage } from './components/PoliciesPage';
 import { SupportPage } from './components/SupportPage';
 import { ReleasesPage } from './components/ReleasesPage';
 import { UseCasesPage } from './components/UseCasesPage';
+import { ChangelogPage } from './components/ChangelogPage';
 import { motion } from 'motion/react';
 
-type MainViews = 'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | 'policies' | 'support' | 'releases' | 'use-cases';
-const validViews: MainViews[] = ['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning', 'policies', 'support', 'releases', 'use-cases'];
+type MainViews = 'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | 'policies' | 'support' | 'releases' | 'use-cases' | 'changelog';
+const validViews: MainViews[] = ['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning', 'policies', 'support', 'releases', 'use-cases', 'changelog'];
 
 export default function App() {
   const [currentView, setCurrentView] = useState<MainViews | `blog-post/${string}`>(() => {
@@ -67,6 +68,8 @@ export default function App() {
       title = 'Releases — General Language';
     } else if (currentView === 'use-cases') {
       title = 'Use Cases — General Language';
+    } else if (currentView === 'changelog') {
+      title = 'Changelog — General Language';
     } else if (currentView.startsWith('blog-post/')) {
       const slug = currentView.replace('blog-post/', '');
       const formattedSlug = slug
@@ -128,6 +131,8 @@ export default function App() {
         <ReleasesPage />
       ) : currentView === 'use-cases' ? (
         <UseCasesPage />
+      ) : currentView === 'changelog' ? (
+        <ChangelogPage />
       ) : currentView.startsWith('blog-post/') ? (
         <BlogPostPage slug={currentView.replace('blog-post/', '')} />
       ) : (
