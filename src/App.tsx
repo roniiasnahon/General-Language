@@ -22,10 +22,12 @@ import { UseCasesPage } from './components/UseCasesPage';
 import { ChangelogPage } from './components/ChangelogPage';
 import { PolicyDetailPage } from './components/PolicyDetailPage';
 import { ShuffleHero } from './components/ShuffleHero';
+import { LatestReleases } from './components/LatestReleases';
+import { CosmiwisePage } from './components/CosmiwisePage';
 import { motion } from 'motion/react';
 
-type MainViews = 'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | 'policies' | 'support' | 'releases' | 'use-cases' | 'changelog';
-const validViews: MainViews[] = ['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning', 'policies', 'support', 'releases', 'use-cases', 'changelog'];
+type MainViews = 'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | 'policies' | 'support' | 'releases' | 'use-cases' | 'changelog' | 'cosmiwise';
+const validViews: MainViews[] = ['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning', 'policies', 'support', 'releases', 'use-cases', 'changelog', 'cosmiwise'];
 
 export default function App() {
   const [currentView, setCurrentView] = useState<MainViews | `blog-post/${string}` | `policy/${string}`>(() => {
@@ -142,6 +144,8 @@ export default function App() {
         <UseCasesPage />
       ) : currentView === 'changelog' ? (
         <ChangelogPage />
+      ) : currentView === 'cosmiwise' ? (
+        <CosmiwisePage />
       ) : currentView.startsWith('blog-post/') ? (
         <BlogPostPage slug={currentView.replace('blog-post/', '')} />
       ) : currentView.startsWith('policy/') ? (
@@ -208,6 +212,8 @@ export default function App() {
           >
             <ShuffleHero />
           </motion.section>
+
+          <LatestReleases onNavigate={setCurrentView} />
         </>
       )}
 
