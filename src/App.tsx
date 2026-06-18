@@ -187,22 +187,6 @@ export default function App() {
           </motion.section>
 
           {/* Partner Gallery Section */}
-          <motion.section 
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
-            className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 sm:py-6 border-t border-zinc-200/40"
-          >
-            <Sparkles 
-              density={400} 
-              size={1.5} 
-              color="#d4d4d8"
-              className="absolute inset-0 z-0 pointer-events-none" 
-            />
-            <Gallery4 />
-          </motion.section>
-
           {/* Shuffle Hero Section */}
           <motion.section
             initial={{ opacity: 0, y: 35 }}
