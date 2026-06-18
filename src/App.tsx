@@ -20,16 +20,18 @@ import { SupportPage } from './components/SupportPage';
 import { ReleasesPage } from './components/ReleasesPage';
 import { UseCasesPage } from './components/UseCasesPage';
 import { ChangelogPage } from './components/ChangelogPage';
+import { PolicyDetailPage } from './components/PolicyDetailPage';
+import { ShuffleHero } from './components/ShuffleHero';
 import { motion } from 'motion/react';
 
 type MainViews = 'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | 'policies' | 'support' | 'releases' | 'use-cases' | 'changelog';
 const validViews: MainViews[] = ['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning', 'policies', 'support', 'releases', 'use-cases', 'changelog'];
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<MainViews | `blog-post/${string}`>(() => {
+  const [currentView, setCurrentView] = useState<MainViews | `blog-post/${string}` | `policy/${string}`>(() => {
     if (typeof window !== 'undefined' && window.location.hash) {
       const hash = window.location.hash.replace('#', '') as any;
-      if (validViews.includes(hash) || String(hash).startsWith('blog-post/')) {
+      if (validViews.includes(hash) || String(hash).startsWith('blog-post/') || String(hash).startsWith('policy/')) {
         return hash;
       }
     }
@@ -77,6 +79,13 @@ export default function App() {
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
       title = `${formattedSlug} — General Language`;
+    } else if (currentView.startsWith('policy/')) {
+      const slug = currentView.replace('policy/', '');
+      const formattedSlug = slug
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      title = `${formattedSlug} — General Language`;
     }
     document.title = title;
   }, [currentView]);
@@ -84,7 +93,7 @@ export default function App() {
   React.useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '') as any;
-      if (validViews.includes(hash) || String(hash).startsWith('blog-post/')) {
+      if (validViews.includes(hash) || String(hash).startsWith('blog-post/') || String(hash).startsWith('policy/')) {
         setCurrentView(hash);
       }
     };
@@ -135,6 +144,8 @@ export default function App() {
         <ChangelogPage />
       ) : currentView.startsWith('blog-post/') ? (
         <BlogPostPage slug={currentView.replace('blog-post/', '')} />
+      ) : currentView.startsWith('policy/') ? (
+        <PolicyDetailPage slug={currentView.replace('policy/', '')} />
       ) : (
         <>
           {/* Hero Section */}
@@ -186,6 +197,16 @@ export default function App() {
               className="absolute inset-0 z-0 pointer-events-none" 
             />
             <Gallery4 />
+          </motion.section>
+
+          {/* Shuffle Hero Section */}
+          <motion.section
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+          >
+            <ShuffleHero />
           </motion.section>
         </>
       )}
