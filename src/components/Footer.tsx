@@ -30,23 +30,13 @@ function Footer({ onNavigate }: FooterProps) {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-zinc-800 hover:text-black">
-                    Product
+                  <a href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('llm-learning'); }} className="text-zinc-800 hover:text-black">
+                    AI Engines
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-zinc-800 hover:text-black">
-                    Docs
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-zinc-800 hover:text-black">
+                  <a href="#" onClick={(e) => { e.preventDefault(); onNavigate?.('changelog'); }} className="text-zinc-800 hover:text-black">
                     Changelog
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-zinc-800 hover:text-black">
-                    Press
                   </a>
                 </li>
                 <li>
