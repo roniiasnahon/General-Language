@@ -16,13 +16,13 @@ import { CompliancePage } from './components/CompliancePage';
 import { WhyStudentsPage } from './components/WhyStudentsPage';
 import { LLMModelsPage } from './components/LLMModelsPage';
 import { PoliciesPage } from './components/PoliciesPage';
-import { SuggestionsPage } from './components/SuggestionsPage';
+import { SupportPage } from './components/SupportPage';
 import { ReleasesPage } from './components/ReleasesPage';
 import { UseCasesPage } from './components/UseCasesPage';
 import { motion } from 'motion/react';
 
-type MainViews = 'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | 'policies' | 'suggestions' | 'releases' | 'use-cases';
-const validViews: MainViews[] = ['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning', 'policies', 'suggestions', 'releases', 'use-cases'];
+type MainViews = 'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | 'policies' | 'support' | 'releases' | 'use-cases';
+const validViews: MainViews[] = ['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning', 'policies', 'support', 'releases', 'use-cases'];
 
 export default function App() {
   const [currentView, setCurrentView] = useState<MainViews | `blog-post/${string}`>(() => {
@@ -61,8 +61,8 @@ export default function App() {
       title = 'AI Orchestration Engine — General Language';
     } else if (currentView === 'policies') {
       title = 'Policies — General Language';
-    } else if (currentView === 'suggestions') {
-      title = 'Suggestions — General Language';
+    } else if (currentView === 'support') {
+      title = 'Support — General Language';
     } else if (currentView === 'releases') {
       title = 'Releases — General Language';
     } else if (currentView === 'use-cases') {
@@ -122,8 +122,8 @@ export default function App() {
         <LLMModelsPage />
       ) : currentView === 'policies' ? (
         <PoliciesPage />
-      ) : currentView === 'suggestions' ? (
-        <SuggestionsPage />
+      ) : currentView === 'support' ? (
+        <SupportPage />
       ) : currentView === 'releases' ? (
         <ReleasesPage />
       ) : currentView === 'use-cases' ? (
