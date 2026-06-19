@@ -4,6 +4,29 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const changelogData = [
   {
+    version: 'F 1.0.3',
+    date: 'June 19, 2026',
+    title: 'Interface Streamlining & Optimization',
+    description: 'A major update focusing on interface streamlining, iconography calibration, and module consolidation.',
+    accordions: [
+      { 
+        label: 'Improvements (5)', 
+        category: 'improvements', 
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Interface Streamlining:</strong> Completely removed the redundant external import sub-menus from the primary selection workspace, reducing visual clutter and streamlining the core local workflow.</li>
+            <li><strong>Iconography Calibration:</strong> Replaced the generic grid iconography with a high-precision Spanner icon across the primary navigation sidebar and utility tabs, establishing a clear visual metaphor for the tools ecosystem.</li>
+            <li><strong>Module Consolidation:</strong> Patched the internal state of the analysis engine to unify the feedback loops and status indicators, ensuring the interface remains professional and focused during active processing.</li>
+            <li><strong>Persistent Configuration:</strong> Hardened the core system scripts to ensure these structural refinements are preserved as the application scales, maintaining a consistent aesthetic across all views.</li>
+            <li><strong>Navigational Synchronization:</strong> Synchronized the iconography between the sidebar and the active tab strip to ensure immediate visual recognition of specialized workspace modules.</li>
+          </ul>
+        )
+      },
+      { label: 'Fixes (0)', category: 'fixes', content: null },
+      { label: 'Patches (0)', category: 'patches', content: null },
+    ]
+  },
+  {
     version: 'F 1.0.1',
     date: 'June 11, 2026',
     title: 'Authentication bridge for Cosmiwise',
