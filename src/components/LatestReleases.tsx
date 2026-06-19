@@ -18,7 +18,6 @@ const releases = [
     text: "A comprehensive toolkit built specifically for teachers. Streamline lesson planning, automate grading, and generate highly personalized learning materials.",
     date: "Coming Soon",
     category: "Announcements",
-    linkText: "Read announcement",
     hasModelDetails: false,
   },
   {
@@ -27,7 +26,6 @@ const releases = [
     text: "The ultimate study companion for students. Scout breaks down complex topics, tests your knowledge, and helps you master your curriculum faster.",
     date: "Coming Soon",
     category: "Announcements",
-    linkText: "Read announcement",
     hasModelDetails: false,
   }
 ];
@@ -73,15 +71,17 @@ export function LatestReleases({ onNavigate }: { onNavigate?: (view: any) => voi
                 </div>
               </div>
               
-              <button 
-                onClick={() => {
-                  if (release.id === 'cosmiwise' && onNavigate) {
-                    onNavigate('cosmiwise');
-                  }
-                }}
-                className="bg-[#1A1A1A] hover:bg-black text-white text-sm font-medium px-5 py-2.5 rounded-lg inline-flex items-center transition-colors">
-                {release.linkText} <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
+              {release.linkText && (
+                <button 
+                  onClick={() => {
+                    if (release.id === 'cosmiwise' && onNavigate) {
+                      onNavigate('cosmiwise');
+                    }
+                  }}
+                  className="bg-[#1A1A1A] hover:bg-black text-white text-sm font-medium px-5 py-2.5 rounded-lg inline-flex items-center transition-colors">
+                  {release.linkText} <ArrowRight className="ml-2 w-4 h-4" />
+                </button>
+              )}
             </div>
           </motion.div>
         ))}
