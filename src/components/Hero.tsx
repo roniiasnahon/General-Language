@@ -27,16 +27,15 @@ const wordVariants = {
 };
 
 const heroWords = [
-  { text: "AI", isStyled: false },
-  { text: "tools", isStyled: true },
-  { text: "and", isStyled: false },
-  { text: "products", isStyled: true },
-  { text: "that", isStyled: false },
-  { text: "put", isStyled: false },
-  { text: "students", isStyled: true },
-  { text: "at", isStyled: false },
-  { text: "the", isStyled: false },
-  { text: "frontier", isStyled: false }
+  { text: "Interactive", isStyled: false },
+  { text: "study", isStyled: true },
+  { text: "tools", isStyled: false },
+  { text: "that", isStyled: true },
+  { text: "help", isStyled: false },
+  { text: "you", isStyled: false },
+  { text: "actually", isStyled: true },
+  { text: "understand", isStyled: false },
+  { text: "things.", isStyled: false }
 ];
 
 interface HeroProps {
@@ -99,7 +98,7 @@ export function Hero({ onScrollToDemo }: HeroProps) {
           {/* Right Column: Editorial Lora Serif description */}
           <div className="lg:col-span-5 flex flex-col justify-start lg:pt-4 space-y-8">
             <p className="font-serif text-xl sm:text-2xl text-zinc-800 leading-relaxed font-[400]">
-              GeneralLanguage transforms how students interact with knowledge. We are dedicated to making complex topics accessible, accelerating learning, and empowering learners worldwide.
+              GeneralLanguage gives you the tools to explore complex ideas without getting lost. We build interactive playgrounds, smart study aids, and direct interfaces so you can stop wrestling with platforms and start actually learning.
             </p>
           </div>
 
