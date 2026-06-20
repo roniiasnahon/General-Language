@@ -1,6 +1,117 @@
 import React from 'react';
-
 export const blogPosts = [
+  {
+    id: "why-human-authorship-matters",
+    title: "Why You Can't Let AI Write Your Entire Research Paper",
+    category: "Academic Integrity",
+    date: "June 20, 2026",
+    coverUrl: "https://media.nature.com/lw1200/magazine-assets/d41586-022-03479-w/d41586-022-03479-w_23649508.jpg",
+    content: (
+      <>
+        <h2 className="text-3xl md:text-[2.5rem] font-medium tracking-tight text-zinc-950 mb-8 pt-4">
+          The Crucial Role of the Human Researcher
+        </h2>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          The temptation is undeniable. With large language models capable of generating thousands of words of coherent, well-structured text in seconds, it can be alluring to let an AI write an entire research paper from start to finish. However, relying completely on artificial intelligence for scholarly output is not just an ethical shortcut—it fundamentally compromises the integrity of the research itself.
+        </p>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">The Hallucination Problem and Fictional Citations</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Generative AI models are fundamentally predictive text engines. They do not possess an internal model of "truth." They predict the most statistically probable next word based on their training data. This leads to a persistent flaw known as "hallucination."
+        </p>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          When asked to write a literature review or support a claim, models will often invent highly plausible-sounding authors, paper titles, and journal names that do not actually exist. Even if the citations are real, the AI might attribute conclusions to a paper that directly contradict its actual findings. A human researcher must meticulously verify every claim and citation; otherwise, the paper introduces misinformation into the academic record.
+        </p>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">The Absence of Novel Synthesis</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          AI is exceptional at summarizing existing knowledge, but true academic discovery requires pushing the boundary of what is known. AI models interpolate within the bounds of their training data. They cannot take a true, intuitive leap into the unknown.
+        </p>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Writing a research paper isn't just about recording data; it's the process through which a researcher structures their thoughts, wrestles with contradictions, and conceptualizes novel frameworks. When you outsource the writing process, you outsource the thinking process. The resulting paper might be perfectly formatted, but it will lack the vital spark of original insight that defines groundbreaking science.
+        </p>
+        
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">Accountability and Ethical Responsibility</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Publishing research is an act of entering the public record and asking the scientific community to trust your findings. If a methodology is flawed, or an analysis is dangerously biased, the author must stand behind it and correct the record.
+        </p>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          An AI algorithm cannot be held accountable. It cannot defend a thesis in peer review. If an AI-generated paper contains critical errors that lead to bad policy or failed experiments in other labs, the human whose name is on the paper bears the full moral and professional consequence.
+        </p>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">Conclusion: AI as a Tool, Not an Author</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          This is not to say that AI has no place in the research workflow. Tools like Cosmiwise are invaluable for synthesizing massive literature bases, extracting data, and translating jargon. They act as tireless research assistants. But just as a lead investigator doesn't let an undergraduate assistant write the final grant proposal unsupervised, a scholar cannot let an algorithm author their final paper. 
+        </p>
+        <p className="text-lg leading-relaxed text-zinc-700">
+          The human researcher must remain the active pilot—steering the inquiry, questioning the outputs, and owning the final intellectual synthesis.
+        </p>
+      </>
+    )
+  },
+  {
+    id: "png-to-pdf-vs-docx-to-pdf",
+    title: "PNG to PDF vs DOCX to PDF: Understanding File Conversions",
+    category: "Technical",
+    date: "June 19, 2026",
+    coverUrl: "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?q=80&w=1200&auto=format&fit=crop",
+    content: (
+      <>
+        <h2 className="text-3xl md:text-[2.5rem] font-medium tracking-tight text-zinc-950 mb-8 pt-4">
+          The Mechanics Behind Document Conversions
+        </h2>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Converting files to PDF is a ubiquitous task in both academic and professional environments. However, the underlying processes of converting a raster image format like PNG to a PDF versus converting a structured document format like DOCX to a PDF are fundamentally different. Understanding these differences guarantees better document quality, accessibility, and file size optimization.
+        </p>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">Converting PNG to PDF: The Raster Wrapper</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          A PNG (Portable Network Graphics) is a raster image format. It is essentially a grid of pixels, where each pixel has a defined color value. When you convert a PNG to a PDF, you are typically not transforming the text or the lines into scalable data.
+        </p>
+        <ul className="list-disc pl-6 space-y-4 my-6 text-zinc-700 text-lg">
+          <li>
+            <strong className="text-zinc-950">A Container Strategy:</strong> 
+            The PDF acts merely as an envelope. The PDF specification allows for images to be embedded directly onto a page canvas. Therefore, a PNG-to-PDF conversion software simply creates a blank PDF page and places the PNG grid entirely over it.
+          </li>
+          <li>
+            <strong className="text-zinc-950">Non-Searchable Text:</strong> 
+            Because it remains an image, any text that was inside the PNG remains just a picture of text. Unless OCR (Optical Character Recognition) is applied during the conversion, you cannot highlight, search, or cleanly copy the text from the resulting PDF.
+          </li>
+          <li>
+            <strong className="text-zinc-950">Scalability and Resolution:</strong> 
+            Since the core data is raster, zooming in will eventually reveal pixelation. The visual quality is strictly bound by the resolution of the original PNG file.
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">Converting DOCX to PDF: The Vector Rendering</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          A DOCX (Microsoft Word Document) is a highly structured, vector-based format. Under the hood, a DOCX file is essentially a zipped collection of XML files that describe the exact text sequence, font styles, paragraph alignments, and layout rules.
+        </p>
+        <ul className="list-disc pl-6 space-y-4 my-6 text-zinc-700 text-lg">
+          <li>
+            <strong className="text-zinc-950">Structural Translation:</strong> 
+            When converting DOCX to PDF, the converter reads the XML structural instructions and translates them into the PDF's own internal drawing commands. Text remains text; fonts are embedded; vector shapes remain scalable math equations.
+          </li>
+          <li>
+            <strong className="text-zinc-950">Inherent Accessibility:</strong> 
+            Because the text data is preserved, the resulting PDF is fully searchable. Users can highlight text, screen readers can interpret the words for visually impaired users, and search engines can index the document's content effectively.
+          </li>
+          <li>
+            <strong className="text-zinc-950">Infinite Scalability:</strong> 
+            Vector fonts and shapes are drawn mathematically upon rendering. Whether you zoom in 100% or 1000%, the edges of letters and vector charts remain perfectly crisp without any pixelation.
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">When to Use Which Approach</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Knowing how these conversions happen dictates their best use cases. If you are scanning physical documents, you are starting with raster images (like PNGs or JPEGs). Converting these to PDF is necessary for clean consolidation but requires a secondary OCR step to extract analytical value.
+        </p>
+        <p className="text-lg leading-relaxed text-zinc-700">
+          Conversely, whenever generating reports, academic papers, or official forms, it is imperative to start from a structured source file like a DOCX or LaTeX file. Direct conversion from these formats to PDF preserves the critical metadata and text manipulability that modern knowledge workflows demand.
+        </p>
+      </>
+    )
+  },
   {
     id: "ai-purpose-research",
     title: "What is AI and Its Purpose on Research",
