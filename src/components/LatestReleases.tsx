@@ -6,7 +6,7 @@ const releases = [
   {
     id: "cosmiwise",
     title: "Cosmiwise",
-    text: "A dedicated research application designed to accelerate academic discovery, synthesize complex papers, and empower deep scholarly investigation.",
+    text: "A powerful research tool that reads and synthesizes complex papers so you can dive straight into writing and discovery.",
     date: "June 10, 2026",
     category: "Announcements",
     linkText: "Read announcement",
@@ -15,7 +15,7 @@ const releases = [
   {
     id: "kindle",
     title: "Kindle",
-    text: "A comprehensive toolkit built specifically for teachers. Streamline lesson planning, automate grading, and generate highly personalized learning materials.",
+    text: "A smart toolkit for teachers. Generate personalized learning materials, automate grading, and cut lesson planning time in half.",
     date: "Coming Soon",
     category: "Announcements",
     hasModelDetails: false,
@@ -23,7 +23,7 @@ const releases = [
   {
     id: "scout",
     title: "Scout",
-    text: "The ultimate study companion for students. Scout breaks down complex topics, tests your knowledge, and helps you master your curriculum faster.",
+    text: "Your personal study companion. Scout breaks down tough topics, quizzes you, and gets you ready for exams without the frustration.",
     date: "Coming Soon",
     category: "Announcements",
     hasModelDetails: false,
