@@ -169,10 +169,10 @@ export default function App() {
               {/* Info descriptor */}
               <div className="lg:col-span-5 space-y-6 relative z-20">
                 <h2 className="font-sans text-3xl sm:text-4xl font-[800] tracking-tight text-zinc-950 leading-[1.1]">
-                  Convenience around the world
+                  Jump right in, anywhere.
                 </h2>
                 <p className="font-sans text-sm text-zinc-600 leading-relaxed">
-                  We empower students globally to accelerate their learning and simplify complex topics. Our educational network connects you with the right resources, study material, and AI-driven insights wherever you are—making studying more efficient and accessible for every student on the planet.
+                  Studying shouldn't mean scrolling through endless menus or deciphering broken interfaces. We build simple, interactive study apps that let you grab the resources you need and start working instantly—wherever you are.
                 </p>
               </div>
 
