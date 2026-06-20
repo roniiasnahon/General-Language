@@ -4,6 +4,44 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const changelogData = [
   {
+    version: 'F 1.0.4',
+    date: 'June 20, 2026',
+    title: 'Desktop Interface & Branding',
+    description: 'Updates to the desktop interface, branding, profile architecture, and structural layering.',
+    accordions: [
+      {
+        label: 'Improvements (4)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Cosmi Identity:</strong> Integrated the "cosmi" brand text directly into the desktop sidebar. It now utilizes high-contrast white, extra-bold typography with tight tracking to match your signature loading style.</li>
+            <li><strong>Responsive Visibility:</strong> Anchored the brand tag inside the sidebar container; it now elegantly disappears and reappears in sync with the sidebar's toggle state, ensuring it never overlaps with active editor tabs.</li>
+            <li><strong>Core Essentials:</strong> Streamlined the profile dropdown by removing the "Upgrade" and "Workspace" modules. The interface now focuses exclusively on high-utility actions: Settings, Invite members, Add account, and Log out.</li>
+            <li><strong>Visual Polish:</strong> Updated the dropdown aesthetics with a deeper #161616 background and subtle zinc-colored iconography. Removed all glow effects and implemented soft, non-intrusive hover states.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Fixes (1)',
+        category: 'fixes',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Isolation Fix:</strong> Added relative positioning to the main sidebar to ensure the dropdown remains contextually pinned but visually superior to all background editor components.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Patches (1)',
+        category: 'patches',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Z-Index Authority:</strong> Resolved the overlapping issue where editor elements appeared above the menu. Implemented a strict layering hierarchy: Base Layer (z-0), Foundation (z-[100]), Interaction (z-[110]), and Peak Layer (z-[120]).</li>
+          </ul>
+        )
+      }
+    ]
+  },
+  {
     version: 'F 1.0.3',
     date: 'June 19, 2026',
     title: 'Interface Streamlining & Optimization',
