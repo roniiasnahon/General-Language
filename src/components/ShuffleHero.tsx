@@ -7,10 +7,10 @@ export const ShuffleHero = () => {
     <section className="w-full px-8 py-24 grid grid-cols-1 md:grid-cols-2 items-center gap-8 max-w-7xl mx-auto border-t border-zinc-200/40 mt-12 bg-[#FAF6EE]">
       <div>
         <h3 className="text-4xl md:text-6xl font-semibold text-zinc-950 tracking-tight leading-[1.1]">
-          Endless possibilities in education
+          Tools that adapt to how you actually study.
         </h3>
         <p className="text-base md:text-[1.125rem] text-zinc-600 my-4 md:my-6 leading-[1.7] font-serif">
-          Our orchestration systems constantly adapt to the diverse realities of students around the world. We offer personalized curriculum pathways that continuously evolve alongside the learner's journey.
+          Everyone learns differently. We build flexible platforms that reshape themselves to fit your pace, your style, and those random 2 AM bursts of inspiration.
         </p>
       </div>
       <ShuffleGrid />
