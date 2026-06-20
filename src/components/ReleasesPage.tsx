@@ -17,6 +17,18 @@ interface Release {
 
 const releases: Release[] = [
   {
+    id: 'v1.0.2',
+    date: 'June 20, 2026',
+    version: 'v. 1.0.2',
+    subtitle: 'Cosmiwise by General Language',
+    summary: 'We are thrilled to introduce Cohere Command A+ 2026 as the primary inference engine out-of-the-box for the Raisee V orchestration tier. This integration drastically enhances retrieval-augmented reasoning and academic synthesis, delivering unprecedented accuracy when parsing complex scientific documentation.',
+    bullets: [
+      <>Integrated <strong>Cohere Command A+ 2026</strong>: Deployed as the default analytical model for the Raisee V tier, providing exceptional reasoning capabilities and deep abstract synthesis.</>,
+      <>Optimized RAG Workloads: Leveraged Cohere's unique architecture to massively reduce hallucinations during heavy literature extraction.</>,
+      <>Expanded contextual memory limits to facilitate seamless cross-referencing across larger sets of reference PDFs without degradation in output quality.</>
+    ],
+  },
+  {
     id: 'v1.0.1',
     date: 'June 13, 2026',
     version: 'v. 1.0.1',
@@ -47,7 +59,7 @@ const releases: Release[] = [
   }
 ];
 
-function ReleaseItem({ release }: { release: Release }) {
+const ReleaseItem: React.FC<{ release: Release }> = ({ release }) => {
   const [expanded, setExpanded] = useState(false);
   const showToggle = release.bullets.length > 4;
 
