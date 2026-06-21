@@ -107,6 +107,20 @@ function Footer({ onNavigate }: FooterProps) {
             >
               Terms
             </a>
+            <a 
+              href="#" 
+              onClick={(e) => { e.preventDefault(); onNavigate?.('do-not-sell'); }}
+              className="hover:text-black cursor-pointer whitespace-nowrap"
+            >
+              Do Not Sell My Info
+            </a>
+            <a 
+              href="#" 
+              onClick={(e) => { e.preventDefault(); onNavigate?.('cookie-preferences'); }}
+              className="hover:text-black cursor-pointer whitespace-nowrap"
+            >
+              Cookie Preferences
+            </a>
           </div>
         </div>
       </div>
