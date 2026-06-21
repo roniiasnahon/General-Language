@@ -24,10 +24,12 @@ import { PolicyDetailPage } from './components/PolicyDetailPage';
 import { ShuffleHero } from './components/ShuffleHero';
 import { LatestReleases } from './components/LatestReleases';
 import { CosmiwisePage } from './components/CosmiwisePage';
+import { DoNotSellPage } from './components/DoNotSellPage';
+import { CookiePreferencesPage } from './components/CookiePreferencesPage';
 import { motion } from 'motion/react';
 
-type MainViews = 'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | 'policies' | 'support' | 'releases' | 'use-cases' | 'changelog' | 'cosmiwise';
-const validViews: MainViews[] = ['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning', 'policies', 'support', 'releases', 'use-cases', 'changelog', 'cosmiwise'];
+type MainViews = 'home' | 'download' | 'terms' | 'privacy' | 'blog' | 'story' | 'about' | 'compliance' | 'why-students' | 'llm-learning' | 'policies' | 'support' | 'releases' | 'use-cases' | 'changelog' | 'cosmiwise' | 'do-not-sell' | 'cookie-preferences';
+const validViews: MainViews[] = ['home', 'download', 'terms', 'privacy', 'blog', 'story', 'about', 'compliance', 'why-students', 'llm-learning', 'policies', 'support', 'releases', 'use-cases', 'changelog', 'cosmiwise', 'do-not-sell', 'cookie-preferences'];
 
 export default function App() {
   const [currentView, setCurrentView] = useState<MainViews | `blog-post/${string}` | `policy/${string}`>(() => {
@@ -74,6 +76,10 @@ export default function App() {
       title = 'Use Cases — General Language';
     } else if (currentView === 'changelog') {
       title = 'Changelog — General Language';
+    } else if (currentView === 'do-not-sell') {
+      title = 'Do Not Sell My Information — General Language';
+    } else if (currentView === 'cookie-preferences') {
+      title = 'Cookie Preferences — General Language';
     } else if (currentView.startsWith('blog-post/')) {
       const slug = currentView.replace('blog-post/', '');
       const formattedSlug = slug
@@ -144,6 +150,10 @@ export default function App() {
         <UseCasesPage />
       ) : currentView === 'changelog' ? (
         <ChangelogPage />
+      ) : currentView === 'do-not-sell' ? (
+        <DoNotSellPage />
+      ) : currentView === 'cookie-preferences' ? (
+        <CookiePreferencesPage />
       ) : currentView === 'cosmiwise' ? (
         <CosmiwisePage />
       ) : currentView.startsWith('blog-post/') ? (
