@@ -4,6 +4,44 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const changelogData = [
   {
+    version: 'F 1.0.5',
+    date: 'June 22, 2026',
+    title: 'Statistics Tools Localization & Library Enhancements',
+    description: 'Extensive localization for Statistics Tools, enhanced Library Panel interfaces, and foundational technical fixes.',
+    accordions: [
+      {
+        label: 'Improvements (4)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Menu Titles:</strong> Updated the Statistics Tools section in the main view to use localized titles for all tools, including Slovin's Formula, Percentage Calculator, Weighted Arithmetic Mean, and Likert Scale.</li>
+            <li><strong>In-Tool Support:</strong> Implemented a comprehensive translation engine within the Statistics Tools component: added support for 10+ languages (English, Spanish, French, German, Italian, Portuguese, Arabic, Chinese, Japanese, and Hindi); localized all internal UI elements such as Tool Parameters, Calculation Breakdown, Population Size, Margin of Error, and the Interpretation Guide; translated specific descriptions and educational tooltips for each statistical method.</li>
+            <li><strong>Visual Polish:</strong> Integrated a subtle separator in the dropdown menu for better grouping and readability.</li>
+            <li><strong>Language Expansion:</strong> Exhaustively mapped the "Learn about File Types" label across all supported languages, including a full localized translation set for the Hindi library interface.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Fixes (1)',
+        category: 'fixes',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Cleanup:</strong> Resolved a code duplication issue in the Library Panel that occurred during the translation update, ensuring the component remains performant and bug-free.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Patches (1)',
+        category: 'patches',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>State Synchronization:</strong> Ensured the active language state from the main application is correctly passed to the Statistics Tools to maintain a consistent multilingual experience.</li>
+          </ul>
+        )
+      }
+    ]
+  },
+  {
     version: 'F 1.0.4',
     date: 'June 20, 2026',
     title: 'Desktop Interface & Branding',
