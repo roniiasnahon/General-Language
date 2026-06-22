@@ -116,7 +116,7 @@ export const TermsOfService: React.FC = () => {
 
         <h2 className="font-sans text-2xl font-bold mt-12 mb-6 tracking-tight text-zinc-950">12. Governing Law and Arbitration</h2>
         <p>
-          These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of the jurisdiction in which our primary corporate headquarters operate, without regard to principles of conflicts of law.
+          These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of the Republic of the Philippines, without regard to principles of conflicts of law.
         </p>
         <p>
           Any dispute, controversy, or claim arising out of or relating to this contract, including its formation, interpretation, performance, breach, termination, or invalidity, shall be settled by binding arbitration in accordance with standard rules of arbitration. The place of arbitration shall be designated in accordance with our corporate location, and the proceedings shall be conducted in the English language.
