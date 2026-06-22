@@ -15,7 +15,7 @@ export function DoNotSellPage() {
         className="max-w-4xl mx-auto flex flex-col items-center text-center"
       >
         <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[800] tracking-tight text-zinc-950 leading-[1.05] max-w-[1000px] mb-16">
-          Do Not Sell or Share My Personal Information
+          Do Not Share My Personal Information
         </h1>
       </motion.div>
 
@@ -26,15 +26,15 @@ export function DoNotSellPage() {
         className="max-w-[700px] mx-auto font-serif text-[1.125rem] md:text-[1.25rem] text-zinc-900 leading-[1.7] space-y-8"
       >
         <p>
-          At General Language, we hold your privacy in the highest regard. We are fundamentally committed to transparency regarding how your personal information is collected, used, shared, and, where applicable under specific jurisdictional laws, "sold." This comprehensive disclosure is designed to provide you with all necessary context and instructions to exercise your rights under comprehensive state privacy laws, including but not limited to the California Consumer Privacy Act (CCPA), the California Privacy Rights Act (CPRA), the Virginia Consumer Data Protection Act (VCDPA), the Colorado Privacy Act (CPA), the Connecticut Data Privacy Act (CTDPA), and the Utah Consumer Privacy Act (UCPA).
+          At General Language, we hold your privacy in the highest regard. We are fundamentally committed to transparency regarding how your personal information is collected, used, shared, and processed. This comprehensive disclosure is designed to provide you with all necessary context and instructions to exercise your rights under the <strong>Data Privacy Act of 2012 (Republic Act No. 10173)</strong> of the Philippines, and its Implementing Rules and Regulations (IRR).
         </p>
 
-        <h2 className="font-sans text-2xl font-bold mt-12 mb-6 tracking-tight text-zinc-950">1. Understanding the Definition of "Sale" and "Sharing"</h2>
+        <h2 className="font-sans text-2xl font-bold mt-12 mb-6 tracking-tight text-zinc-950">1. Understanding Data Sharing and Processing</h2>
         <p>
-          It is crucial to understand that General Language does not "sell" your personal information in the traditional sense of exchanging it for direct monetary compensation. We do not package your data and broker it to third-party data merchants. However, modern privacy legislation, particularly in California, defines a "sale" and "sharing" extremely broadly.
+          Under the Philippine Data Privacy Act (DPA), you have the right to object to the processing of your personal data, including processing for direct marketing, automated processing, or profiling. While we do not "sell" your personal information for direct monetary compensation, we may share or disclose your data to third-party ad networks, analytics providers, or social media companies to understand our user base and deliver relevant content.
         </p>
         <p>
-          Under these frameworks, a "sale" can include making personal information available to third-party ad networks, social media companies, or analytics providers in exchange for services, algorithmic insights, or other valuable considerations, even if no money changes hands. "Sharing" typically refers specifically to disclosing data for cross-context behavioral advertising purposes. Because we utilize some of these standard web technologies to understand our user base and deliver relevant content, we provide this comprehensive opt-out mechanism.
+          Because we utilize some of these standard web technologies, we provide this comprehensive opt-out mechanism to respect your Right to Object to data sharing and profiling.
         </p>
 
         <h2 className="font-sans text-2xl font-bold mt-12 mb-6 tracking-tight text-zinc-950">2. Categories of Personal Information Involved</h2>
@@ -59,9 +59,9 @@ export function DoNotSellPage() {
           <li>Detecting, preventing, and mitigating fraudulent activity, bot traffic, and security incidents.</li>
         </ul>
 
-        <h2 className="font-sans text-2xl font-bold mt-12 mb-6 tracking-tight text-zinc-950">4. Your Right to Opt-Out</h2>
+        <h2 className="font-sans text-2xl font-bold mt-12 mb-6 tracking-tight text-zinc-950">4. Your Right to Object</h2>
         <p>
-          If you are a resident of a jurisdiction that grants the right to opt-out of the sale or sharing of personal information for cross-context behavioral advertising, you may exercise that right at any time. By invoking this right, we will instruct our downstream partners and integrated third-party systems to cease using your personal information for these defined purposes.
+          If you are a resident of the Philippines, or in jurisdictions covered by the DPA, you have the right to object to the processing of your personal information, including processing for cross-context behavioral advertising or profiling. By invoking this right, we will instruct our downstream partners and integrated third-party systems to cease using your personal information for these defined purposes, subject to certain exceptions allowed by law.
         </p>
         <p>
           Please note that exercising your right to opt-out will not prevent you from seeing advertisements or content altogether. Instead, the content you encounter will be contextual (based on the current page you are viewing) rather than targeted based on your historical behavior across different websites.
