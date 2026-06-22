@@ -71,7 +71,7 @@ export const PrivacyPolicy: React.FC = () => {
 
         <h2 className="font-sans text-2xl font-bold mt-12 mb-6 tracking-tight text-zinc-950">6. Regional Regulations and International Standard Compliance</h2>
         <p>
-          GeneralLanguage operates on a global scale and actively targets alignment with robust privacy frameworks including the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and academic-focused student records protection laws. 
+          GeneralLanguage operates on a global scale and actively targets alignment with robust privacy frameworks including the <strong>Data Privacy Act of 2012 (Republic Act No. 10173)</strong> of the Philippines, as well as the General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and academic-focused student records protection laws. 
         </p>
         <p>
           Depending on your regional legal jurisdiction, you may hold distinct privileges regarding the inspection, rectification, restriction, or total removal of your accumulated data records. Contact our legal representatives to register formal data requests.
