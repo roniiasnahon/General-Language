@@ -1,4 +1,5 @@
 import React from 'react';
+
 export const blogPosts = [
   {
     id: "why-human-authorship-matters",
@@ -196,62 +197,94 @@ export const blogPosts = [
     title: "Understanding File Types",
     category: "Technical",
     date: "May 28, 2026",
-    coverUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+    coverUrl: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*OUa4QsQa2OQRPOx3W0jktw.png",
     content: (
       <>
         <h2 className="text-3xl md:text-[2.5rem] font-medium tracking-tight text-zinc-950 mb-8 pt-4">
           The Anatomy of Digital Data
         </h2>
-        <p>
-          Files are the fundamental containers of digital information. Understanding how different file formats organize, compress, and store data is crucial for build systems, data processors, and developers alike. At its core, every file is just a stream of bytes, but the magic happens in the interpretation.
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Imagine your computer is a massive library. Inside this library, there are millions of books, but they aren't all written in the same language or formatted in the same way. Some are picture books, some are complex ledgers, and some are simple notepads. 
+        </p>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          In the digital world, these "books" are files, and the "languages" they use are <strong>file formats</strong>. Understanding how different file formats organize, compress, and store data is not just for software engineers—it’s crucial for students, researchers, and everyday users who want to keep their digital lives organized and efficient. At its core, every file is just a stream of 1s and 0s (bytes), but the magic happens in how your computer interprets them.
         </p>
         
-        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">Encoding and Decoding</h3>
-        <p>
-          Before we even consider the format, we must consider the character encoding. Most modern text-based files use <strong>UTF-8</strong>, a variable-width character encoding capable of encoding all 1,112,064 valid character code points in Unicode. When a system reads a file, it must know (or guess via BOM or heuristics) the encoding to correctly map raw bytes to human-readable strings.
-        </p>
-
-        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">Text-Based Formats</h3>
-        <p>
-          Structured serializations constitute the backbone of modern web configuration, programming languages, and static content:
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">Text-Based Formats: The Simple Notes</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Some files are basically just digital paper with letters on them. These are easy for humans to read and easy for computers to process:
         </p>
         <ul className="list-disc pl-6 space-y-4 my-6 text-zinc-700">
           <li>
             <strong className="text-zinc-950">JSON (.json):</strong> 
-            JavaScript Object Notation is the industry standard for lightweight data serialization. It is built on two structures: a collection of name/value pairs and an ordered list of values. Its simplicity and language independence make it the ideal format for API communication.
+            JavaScript Object Notation sounds complicated, but it's really just a way to organize data using name and value pairs. Think of it like a form you fill out: <code className="bg-zinc-100 px-1 rounded font-mono text-sm">First Name: John, Last Name: Doe</code>. It's the industry standard for sending data across the web because it's so simple.
           </li>
           <li>
             <strong className="text-zinc-950">YAML (.yaml / .yml):</strong> 
-            Standing for "YAML Ain't Markup Language", it is a human-friendly data serialization language for all programming languages. It is commonly used for configuration files (like Docker or CI/CD pipelines) because of its reliance on indentation rather than complex bracket systems.
+            A human-friendly data language. It uses indentation (spaces) to group things together, making it look very clean and easy to read, like a well-organized outline.
           </li>
           <li>
             <strong className="text-zinc-950">Markdown (.md):</strong> 
-            An abstraction layer over HTML. It allows you to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML).
+            This is what you use when you want to write plain text but add a little bit of formatting—like making something **bold** or adding a # heading. It's super popular for taking notes and writing documentation because you don't need a heavy word processor.
           </li>
         </ul>
 
-        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">The Binary Realm</h3>
-        <p>
-          Binary encoding is compressed and structured for special software parsers. Unlike text files, binary files are not meant to be read by human eyes without translation tools.
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">The Office Documents: A Hidden Secret</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          If you are a student, these are the formats you probably use every single day to write papers, crunch numbers, and give presentations:
         </p>
-        <p>
-          <strong>Magic Bytes:</strong> Most binary formats include a "signature" – a few bytes at the very beginning of the file that tell the operating system what it is. For example, a PNG file always starts with the hex values <code className="bg-zinc-100 px-1 rounded">89 50 4E 47</code>.
-        </p>
-        
         <ul className="list-disc pl-6 space-y-4 my-6 text-zinc-700">
           <li>
-            <strong className="text-zinc-950">PDF (.pdf):</strong> 
-            A complex format that doesn't just store text; it stores instructions for a rendering engine. It embeds fonts, vector paths, and raster images to ensure document fidelity across any screen.
+            <strong className="text-zinc-950">Word Documents (.docx):</strong> The standard for essays, reports, and rich text editing.
           </li>
           <li>
-            <strong className="text-zinc-950">Lossy vs. Lossless Images:</strong> 
-            JPEG uses lossy compression (permanently removing data to save space), while PNG is lossless (reconstructing the original data perfectly). <strong>WebP</strong> is the modern challenger, offering both modes with significantly better compression ratios for the web.
+            <strong className="text-zinc-950">Spreadsheets (.xlsx):</strong> The standard for data, charts, accounting, and math.
+          </li>
+          <li>
+            <strong className="text-zinc-950">Presentations (.pptx):</strong> The standard for slideshows and visual lectures.
+          </li>
+        </ul>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          <strong>Here is a fun technical secret:</strong> These modern formats (anything ending with that 'x') are actually just disguised ZIP folders! If you have a <code className="bg-zinc-100 px-1 rounded font-mono text-sm">.docx</code> file, try changing the extension to <code className="bg-zinc-100 px-1 rounded font-mono text-sm">.zip</code> and double-clicking it. You will see it unzips into a folder containing all your images, formatting rules, and text split into separate little files. They are essentially a collection of XML files and media compressed together to save space!
+        </p>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">PDF (.pdf): The Digital Printout</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          The <strong>Portable Document Format</strong> is exactly what it sounds like. Imagine taking a piece of paper, freezing it in time, and turning it into a digital file. 
+        </p>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          A PDF doesn't just store text; it stores instructions for a rendering engine. It embeds the exact fonts you used, the exact vector paths of your shapes, and the exact placement of your images to ensure document fidelity across any screen. Whether you open a PDF on a Mac, a Windows PC, or an old smartphone, it will look exactly the same. It acts as a reliable digital container for final-form, non-editable documents—which is why your teachers always ask you to submit your essays as PDFs!
+        </p>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">Images: The Visual Realm</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Visual data requires specialized binary compression. Without compression, a single photo from your smartphone would be massively large and slow to send.
+        </p>
+        <ul className="list-disc pl-6 space-y-4 my-6 text-zinc-700">
+          <li>
+            <strong className="text-zinc-950">JPEG (.jpg):</strong> 
+            This format uses <em>lossy compression</em>. It permanently throws away tiny bits of color data that the human eye can't easily detect in order to drastically shrink the file size. It's perfect for photographs, but terrible for text or sharp digital graphics.
+          </li>
+          <li>
+            <strong className="text-zinc-950">PNG (.png):</strong> 
+            This format is <em>lossless</em>. It reconstructs the original data perfectly without losing quality. Better yet, it supports transparency (invisible backgrounds). It's ideal for logos, digital art, diagrams, and screenshots.
+          </li>
+          <li>
+            <strong className="text-zinc-950">WebP (.webp):</strong> 
+            This is the modern challenger created by Google. It offers both lossy and lossless modes, providing significantly better compression ratios than both JPEG and PNG. It's designed specifically to make websites load much faster!
           </li>
         </ul>
 
-        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">MIME Types and Identification</h3>
-        <p>
-          In a web context, we rely on <strong>MIME types</strong> (Multipurpose Internet Mail Extensions). When a server sends a file, it includes a <code className="bg-zinc-100 px-1 rounded">Content-Type</code> header (e.g., <code className="bg-zinc-100 px-1 rounded">application/json</code> or <code className="bg-zinc-100 px-1 rounded">image/webp</code>). This tells the browser exactly how to handle the incoming byte stream, regardless of what the file extension might be.
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">How Does Your Computer Know?</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Usually, your computer relies on the file extension (like <code className="bg-zinc-100 px-1 rounded font-mono text-sm">.pdf</code> or <code className="bg-zinc-100 px-1 rounded font-mono text-sm">.jpg</code>). But what happens if the extension is missing or someone changes it? 
+        </p>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Deep inside the binary code, most files contain "magic bytes"—a signature of a few bytes at the very beginning of the file that shouts out its true identity to the operating system. For example, a PNG file always starts with the specific hexadecimal values <code className="bg-zinc-100 px-1 rounded font-mono text-sm">89 50 4E 47</code>. On the internet, servers use <strong>MIME Types</strong> to tell your browser what kind of file is coming through the cables, ensuring that an image opens as an image, and a webpage opens as a webpage, regardless of the filename length or extension name.
+        </p>
+        
+        <p className="text-lg leading-relaxed text-zinc-700 mt-12 italic border-l-4 border-zinc-300 pl-4 py-1">
+          By understanding these basic categories, you step beyond just clicking icons and start seeing the underlying structure of the digital world. You know which image to use for your presentation, why you submit assignments as PDFs, and the secret zipped inside your Word documents!
         </p>
       </>
     )
