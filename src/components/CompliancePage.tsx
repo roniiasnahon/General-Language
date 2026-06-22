@@ -37,9 +37,9 @@ export function CompliancePage() {
           We strictly evaluate lesson paths against standard academic matrices to guarantee conceptual accuracy. Every tutorial and exercise is peer-reviewed by our educational council to ensure high scholastic quality and proper cognitive alignment.
         </p>
 
-        <h2 className="font-sans text-2xl font-bold mt-12 mb-6 tracking-tight text-zinc-950">2. Student Privacy and Information Security (COPPA & FERPA)</h2>
+        <h2 className="font-sans text-2xl font-bold mt-12 mb-6 tracking-tight text-zinc-950">2. Student Privacy and Information Security (DPA, COPPA & FERPA)</h2>
         <p>
-          We hold that a student’s personal data and learning history are private and sovereign. We adhere to the Children's Online Privacy Protection Act (COPPA), disabling location tracking and geo-metadata collection for any user under thirteen years of age.
+          We hold that a student’s personal data and learning history are private and sovereign. We adhere to the <strong>Data Privacy Act of 2012</strong> of the Philippines, as well as the Children's Online Privacy Protection Act (COPPA), disabling location tracking and geo-metadata collection for any user under thirteen years of age.
         </p>
         <p>
           Our platform fully conforms to Federal Educational Rights and Privacy Act (FERPA) regulations. Progress records and metrics can only be viewed in secure, private dashboards by authorized parents, guardians, and educational representatives. We provide an absolute zero-ads guarantee inside our visual environments.
