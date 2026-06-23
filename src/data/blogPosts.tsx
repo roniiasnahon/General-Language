@@ -2,6 +2,82 @@ import React from 'react';
 
 export const blogPosts = [
   {
+    id: "demystifying-citations-and-sources",
+    title: "The Ultimate Guide to Citations and Sources (Without Falling Asleep!)",
+    category: "Academic Skills",
+    date: "June 23, 2026",
+    coverUrl: "https://www.hubspot.com/hubfs/cite-sources-hero.webp",
+    content: (
+      <>
+        <h2 className="text-3xl md:text-[2.5rem] font-medium tracking-tight text-zinc-950 mb-8 pt-4">
+          Why Do We Even Cite Things?
+        </h2>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Picture this: you are telling your best friend a wild story about a celebrity dropping their ice cream cone. Your friend immediately asks, "Wait, really? Where did you see that?" You pull up the video on your phone to prove it. 
+        </p>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          <strong>Congratulations, you just used a source to back up a claim!</strong>
+        </p>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          In academia, citations are essentially the grown-up version of saying, <em>"I didn't just make this up, look at exactly where I found it!"</em> Citations do two magical things: they give credit to the original thinker (because stealing ideas is uncool), and they let your reader follow your research breadcrumbs.
+        </p>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">Primary vs. Secondary vs. Tertiary Sources</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          Not all sources are created equal. Let's break down the "who, what, and when" of the information world into three easy tiers.
+        </p>
+        
+        <ul className="list-disc pl-6 space-y-4 my-6 text-zinc-700">
+          <li>
+            <strong className="text-zinc-950">Primary Sources (The VIP Section):</strong> These are the raw, firsthand materials straight from the horse's mouth. Examples: original diaries, lab experiment data, historical photographs, interview transcripts, and tweets from a celebrity. If it was created <em>during</em> an event or is the direct result of a new experiment, it's primary!
+          </li>
+          <li>
+            <strong className="text-zinc-950">Secondary Sources (The Commentator):</strong> These sources take the primary stuff, chew on it, and give you an analysis. Think of sports commentators explaining a game. Examples: history textbooks, documentary films, academic review articles, and biographies. They didn't do the raw experiment themselves, but they are explaining what it means.
+          </li>
+          <li>
+            <strong className="text-zinc-950">Tertiary Sources (The Encyclopedia):</strong> These are the summaries of summaries. They gather established facts to give you a quick overview. Examples: Wikipedia (gasp!), encyclopedias, and almanacs. <em>Pro Tip: Use tertiary sources to learn the basics and find the primary/secondary sources hiding in their reference sections!</em>
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">The Citation Styles: Why So Many Rules?</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          You've probably heard terrifying acronyms like APA, MLA, and Chicago. Why are there so many? Because different subjects care about different details! Let’s meet the citation families:
+        </p>
+
+        <ul className="list-disc pl-6 space-y-4 my-6 text-zinc-700">
+          <li>
+            <strong className="text-zinc-950">MLA (Modern Language Association) – The Humanities Nerd:</strong> Used for English, literature, and the arts. MLA cares profoundly about <em>who</em> wrote something and exactly <em>what page</em> it's on so the reader can find the exact quote. <br/> <em className="text-sm">Example: (Smith 42)</em>
+          </li>
+          <li>
+            <strong className="text-zinc-950">APA (American Psychological Association) – The Science Geek:</strong> Used in psychology, sciences, and education. APA cares heavily about <em>when</em> something was published because science moves super fast. Old science is often bad science! <br/> <em className="text-sm">Example: (Smith, 2023)</em>
+          </li>
+          <li>
+            <strong className="text-zinc-950">Chicago – The History Buff:</strong> Found primarily in history and some humanities. Chicago loves its footnotes (those tiny numbers at the bottom of the page). Why? Because historians want to give you all the juicy background context without interrupting the main story flow.
+          </li>
+          <li>
+            <strong className="text-zinc-950">IEEE – The Engineer:</strong> Used in computer science and engineering. Super efficient, minimalist, and uses numbered brackets so you don't waste time reading long names in the text. <br/> <em className="text-sm">Example: [1]</em>
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-medium text-zinc-900 mt-12 mb-4">How to Spot a Sketchy Source</h3>
+        <p className="text-lg leading-relaxed text-zinc-700 mb-6">
+          The internet is a wild west of information. Use the <strong>C.R.A.A.P. Test</strong> (yes, really!) before you cite anything:
+        </p>
+        <ul className="list-disc pl-6 space-y-2 my-6 text-zinc-700">
+          <li><strong>Currency:</strong> Is it recent enough? An article about iPhone tech from 2010 is useless now.</li>
+          <li><strong>Relevance:</strong> Does it actually answer your question?</li>
+          <li><strong>Authority:</strong> Who wrote it? A doctor or a random dude in his basement?</li>
+          <li><strong>Accuracy:</strong> Are there facts backed up by evidence? Are there spelling errors everywhere?</li>
+          <li><strong>Purpose:</strong> Is the author trying to educate you, or are they trying to sell you something or push an extreme bias?</li>
+        </ul>
+
+        <p className="text-lg leading-relaxed text-zinc-700 mt-12 italic border-l-4 border-zinc-300 pl-4 py-1">
+          Citing sources doesn't have to be a nightmare of confusing punctuation. It's simply the language of trust! When you build your paper with strong, credible sources, you build a fortress around your arguments. So go out there, find awesome information, and give credit where credit is due!
+        </p>
+      </>
+    )
+  },
+  {
     id: "why-human-authorship-matters",
     title: "Why You Can't Let AI Write Your Entire Research Paper",
     category: "Academic Integrity",
