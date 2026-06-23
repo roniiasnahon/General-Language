@@ -44,6 +44,11 @@ function Footer({ onNavigate }: FooterProps) {
                     Releases
                   </a>
                 </li>
+                <li>
+                  <a href="https://stats.uptimerobot.com/v0d2WgsFtv" target="_blank" rel="noopener noreferrer" className="text-zinc-800 hover:text-black">
+                    Status
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
