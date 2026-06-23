@@ -4,6 +4,48 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const changelogData = [
   {
+    version: 'F 1.0.6',
+    date: 'June 23, 2026',
+    title: 'Core Features, UI Polish & Robust Infrastructure',
+    description: 'Major improvements to document pipeline, security, multilingual support, and interactive academic tools.',
+    accordions: [
+      {
+        label: 'Fixes & Patches (4)',
+        category: 'fixes',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Robust PDF Infrastructure:</strong> We patched the document pipeline with signature-based "sniffing" and multi-layered decompression (Gzip/Brotli/Deflate). This fixes issues where papers would download as corrupted or unreadable files.</li>
+            <li><strong>Access Bypass & Self-Healing:</strong> Implemented a "self-healing" mechanism that detects 403 Forbidden errors or broken downloads and automatically reconstructs a metadata-enriched PDF from Firestore records, ensuring researchers never lose access to their citation context.</li>
+            <li><strong>UI Polish & JSON Leak Stripping:</strong> Added advanced regex-based cleansing (cleanJsonLeak) to both the server and client. This fixes "AI slop" where the model might accidentally output technical JSON markers or internal reasoning tags in the chat.</li>
+            <li><strong>File Integrity Maintenance:</strong> Created a cleanup.ts utility to automatically detect and prune corrupted .bin files from storage that don't meet valid PDF headers.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Improvements (3)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Global Multilingual Support:</strong> Expanded the interface with a comprehensive translation system supporting 10+ languages, including Arabic, Chinese, Hindi, and several European languages.</li>
+            <li><strong>Rapid-Loading Cache System:</strong> Integrated a dual-layer caching strategy using the browser's Cache Storage API and an in-memory session cache. This allows previously viewed PDFs to open near-instantly without secondary network requests.</li>
+            <li><strong>Cross-Platform Architecture:</strong> Improved the project structure to support Desktop (Tauri/Electron) environments alongside the web app, including deep-link plugins and native URL openers.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'New Features (3)',
+        category: 'features',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Interactive Citation Mapping:</strong> Added support for dynamic citations using [[page:NUMBER|SOURCE_TITLE]] syntax. The AI mentor now uses this to create clickable links that jump users directly to specific pages in their research PDFs.</li>
+            <li><strong>Academic Statistics Suite:</strong> Integrated a specialized tools panel featuring Slovin’s Formula, Likert Scale analysis, and Weighted Mean calculators, specifically designed for research data processing.</li>
+            <li><strong>Research Paper Autopilot:</strong> Connected the system to OpenAlex and VoyageAI to enable real-world academic discovery, allowing the assistant to find, summarize, and download real scholarly works.</li>
+          </ul>
+        )
+      }
+    ]
+  },
+  {
     version: 'F 1.0.5',
     date: 'June 22, 2026',
     title: 'Statistics Tools Localization & Library Enhancements',
