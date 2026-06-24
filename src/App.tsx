@@ -48,38 +48,59 @@ export default function App() {
 
     // Dynamically update document title based on view
     let title = 'General Language — Workspace Orchestration';
+    let description = 'General Language — Workspace Orchestration and Cosmi development platforms. Build future proof skills and orchestrate your computing workspaces seamlessly.';
+    
     if (currentView === 'download') {
       title = 'Download Cosmi — General Language';
+      description = 'Download Cosmi, our flagship workspace orchestration tool. Available for Windows, macOS, and Linux.';
     } else if (currentView === 'terms') {
       title = 'Terms of Use — General Language';
+      description = 'Read the Terms of Use and Service Agreements for General Language and Cosmi development platforms.';
     } else if (currentView === 'privacy') {
       title = 'Privacy Policy — General Language';
+      description = 'Learn how General Language protects your privacy, secures your data, and adheres to global compliance standards.';
     } else if (currentView === 'blog') {
       title = 'Blog — General Language';
+      description = 'Insights, product updates, and technical deep-dives from the General Language engineering and research teams.';
     } else if (currentView === 'story') {
       title = 'Our Story — General Language';
+      description = 'Discover the origins of General Language, our mission, and our vision for the future of workspace orchestration.';
     } else if (currentView === 'about') {
       title = 'About Us — General Language';
+      description = 'Learn about the General Language team, our values, and our commitment to building the best workspace orchestration platform.';
     } else if (currentView === 'compliance') {
       title = 'Compliance & Standards — General Language';
+      description = 'General Language meets the highest standards for data security and compliance, including SOC 2, HIPAA, and GDPR.';
     } else if (currentView === 'why-students') {
       title = 'Why We Help Students — General Language';
+      description = 'Learn why General Language is committed to providing free and accessible workspace orchestration tools for students worldwide.';
     } else if (currentView === 'llm-learning') {
       title = 'AI Orchestration Engine — General Language';
+      description = 'Explore the General Language AI orchestration engine, designed to seamlessly integrate LLMs into your daily workflows.';
     } else if (currentView === 'policies') {
       title = 'Policies — General Language';
+      description = 'Review the policies that govern the use of General Language platforms, including our Acceptable Use Policy and Code of Conduct.';
     } else if (currentView === 'support') {
       title = 'Support — General Language';
+      description = 'Get help with General Language platforms. Access documentation, community forums, and direct support channels.';
     } else if (currentView === 'releases') {
       title = 'Releases — General Language';
+      description = 'Stay up-to-date with the latest features, fixes, and improvements to the General Language workspace orchestration platform.';
     } else if (currentView === 'use-cases') {
       title = 'Use Cases — General Language';
+      description = 'Discover how teams across industries use General Language to orchestrate their workspaces and boost productivity.';
     } else if (currentView === 'changelog') {
       title = 'Changelog — General Language';
+      description = 'Detailed changelog for General Language products. Track every update, fix, and new feature.';
     } else if (currentView === 'do-not-sell') {
       title = 'Do Not Sell My Information — General Language';
+      description = 'Exercise your right to opt-out of the sale or sharing of your personal information under applicable privacy laws.';
     } else if (currentView === 'cookie-preferences') {
       title = 'Cookie Preferences — General Language';
+      description = 'Manage your cookie preferences and learn how General Language uses cookies to improve your experience.';
+    } else if (currentView === 'cosmiwise') {
+      title = 'Cosmiwise — General Language';
+      description = 'Cosmiwise is our dedicated hub for learning how to maximize your potential with the Cosmi platform.';
     } else if (currentView.startsWith('blog-post/')) {
       const slug = currentView.replace('blog-post/', '');
       const formattedSlug = slug
@@ -87,6 +108,7 @@ export default function App() {
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
       title = `${formattedSlug} — General Language`;
+      description = `Read our latest insights on ${formattedSlug} from the General Language blog.`;
     } else if (currentView.startsWith('policy/')) {
       const slug = currentView.replace('policy/', '');
       const formattedSlug = slug
@@ -94,8 +116,38 @@ export default function App() {
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
         .join(' ');
       title = `${formattedSlug} — General Language`;
+      description = `Read our detailed policy on ${formattedSlug}.`;
     }
+    
     document.title = title;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    }
+    
+    // Update og:title
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', title);
+    }
+    
+    // Update og:description
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', description);
+    }
+    
+    // Update canonical link
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', window.location.href.split('#')[0] + (currentView === 'home' ? '' : `#${currentView}`));
+    
   }, [currentView]);
 
   React.useEffect(() => {
