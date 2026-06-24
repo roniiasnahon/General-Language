@@ -17,6 +17,19 @@ interface Release {
 
 const releases: Release[] = [
   {
+    id: 'v1.0.3',
+    date: 'June 24, 2026',
+    version: 'v. 1.0.3',
+    subtitle: 'Cosmiwise by General Language',
+    summary: 'This release expands our core intelligence suite by integrating new state-of-the-art models, alongside substantial interface improvements that modernize our tooltip engine and agent selectors. Additionally, we have refined the display nomenclature for our suite of models to align with our poetic designation schema, establishing a more cohesive and professional workspace experience.',
+    bullets: [
+      <><strong>New Intelligence Models</strong>: Integrated <strong>Villanelle Post (reka-flash)</strong> for lightning-fast, multimodal intelligence powered by Reka AI, securely nested inside the More Models category, and <strong>Cinquain Lite (mercury-2)</strong>, an advanced reasoning model developed by Inception Labs.</>,
+      <><strong>Modern Tooltip Engine</strong>: Model descriptions have been removed from the primary list view to optimize horizontal space, and are now rendered dynamically as high-contrast hover tooltips.</>,
+      <><strong>Interface Polish & Spacing</strong>: Built custom sharp pointer anchors reflecting a refined, clean, and professional visual layout. Refined container alignment, paddings, and agent dropdown menus to remain pristine and cohesive without visual clutter.</>,
+      <><strong>Poet-Inspired Rebranding</strong>: Updated display titles to align with our poetic designation schema, including transitions such as Composition I to Ode I, Sift II to Sestina, Visor IV to Pantoum V, and Kindle Preview to Prose Preview.</>
+    ],
+  },
+  {
     id: 'v1.0.2',
     date: 'June 20, 2026',
     version: 'v. 1.0.2',
