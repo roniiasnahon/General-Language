@@ -4,6 +4,36 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const changelogData = [
   {
+    version: 'F 1.0.7',
+    date: 'June 24, 2026',
+    title: 'User Interface & Aesthetic Improvements',
+    description: 'Sleek minimalist layouts, sharp-pinnacle tooltips, and ultra-clean agent dropdowns alongside stability and performance patches.',
+    accordions: [
+      {
+        label: 'Improvements (3)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Sleek Minimalist Layouts:</strong> Removed static descriptive text beneath the model labels to save space and present an ultra-clean dropdown panel.</li>
+            <li><strong>Sharp-Pinnacle Tooltips:</strong> Added hover-activated tooltips to the main chat model selector. These tooltips feature a sharp, rotated border-pointer pointing precisely to the selected model row, fast, GPU-accelerated enter/exit transitions (transition-all duration-150), and slate styling matching the dark theme of the container.</li>
+            <li><strong>Ultra-Clean Agent Dropdown:</strong> Removed all tooltips and description text from the Agent's specific model selection menu as requested, ensuring a direct and focused workspace view.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Fixes & Patches (3)',
+        category: 'fixes',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Responsive Width Reductions:</strong> Scaled down the dropdown container widths to fit the model name listings perfectly without unnecessary negative margin padding.</li>
+            <li><strong>Linter & Type Alignment:</strong> Resolved all TypeScript type dependencies across both MainChat.tsx and App.tsx relative to the newly nested model lists.</li>
+            <li><strong>Build System Verification:</strong> Successfully validated the entire application pipeline through production-grade build tests.</li>
+          </ul>
+        )
+      }
+    ]
+  },
+  {
     version: 'F 1.0.6',
     date: 'June 23, 2026',
     title: 'Core Features, UI Polish & Robust Infrastructure',
