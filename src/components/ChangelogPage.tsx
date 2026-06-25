@@ -4,6 +4,47 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const changelogData = [
   {
+    version: 'F 1.0.8',
+    date: 'June 25, 2026',
+    title: 'UI & Experience Refinements, Model Updates & System Reliability',
+    description: 'Standardized hover behavior, updated model names, categorized models, and improved system reliability.',
+    accordions: [
+      {
+        label: 'UI & Experience Refinements (4)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Hover Consistency:</strong> Standardized the hover behavior across the Move Folder dropdown, Hyperlink Context Menu, and Table Context Menu. These now match the "Create" button's aesthetic.</li>
+            <li><strong>Rounded-LG Corners:</strong> Updated from sharp or small radii to rounded-lg.</li>
+            <li><strong>Refined Spacing & Palette:</strong> Adjusted padding and gaps (gap-3, px-2.5, py-1.5) and integrated bg-[#27272a] for hover states with improved icon coloring.</li>
+            <li><strong>Table Context Menu Overhaul:</strong> Added consistent grouping and spacing (using my-1 mx-1 separators) to the table management tools.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Model Updates & Organization (3)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Model Renaming:</strong> Renamed the Raisee V model to Ericka V to reflect the updated identity.</li>
+            <li><strong>Model Categorization:</strong> Moved the Triolett II model (Xiaomi) from the primary list into the "More models" nested menu for a cleaner initial view.</li>
+            <li><strong>Spelling Patch:</strong> Corrected the spelling of "Triolet II" to Triolett II across the entire codebase.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'System Reliability (2)',
+        category: 'fixes',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Type-Safe Filtering:</strong> Updated the model filtering logic in both the main application and the chat component to ensure the new model categorization is handled reliably across the UI.</li>
+            <li><strong>Verified Build:</strong> All changes have been verified with the internal linter and build system to ensure the application remains stable and production-ready.</li>
+          </ul>
+        )
+      }
+    ]
+  },
+  {
     version: 'F 1.0.7',
     date: 'June 24, 2026',
     title: 'User Interface & Aesthetic Improvements',
