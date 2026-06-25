@@ -1,110 +1,73 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { GlobeInteractive } from './GlobeInteractive';
+import { ArrowRight, Download } from 'lucide-react';
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.08,
-    },
-  },
-};
+const text = "Introducing Cosmiwise";
+const characters = text.split("");
 
-const wordVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 12,
-  },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: {
-      duration: 0.4,
-      ease: [0.215, 0.61, 0.355, 1],
-    },
-  },
-};
-
-const heroWords = [
-  { text: "Interactive", isStyled: false },
-  { text: "study", isStyled: true },
-  { text: "tools", isStyled: false },
-  { text: "that", isStyled: true },
-  { text: "help", isStyled: false },
-  { text: "you", isStyled: false },
-  { text: "actually", isStyled: true },
-  { text: "understand", isStyled: false },
-  { text: "things.", isStyled: false }
-];
-
-interface HeroProps {
-  onScrollToDemo: () => void;
-}
-
-export function Hero({ onScrollToDemo }: HeroProps) {
+export function Hero() {
   return (
-    <div className="relative overflow-hidden bg-[#FAF6EE] pt-24 sm:pt-32 pb-20">
+    <div className="relative w-full h-screen overflow-hidden font-sans bg-[#FAF6EE]">
       
-      <div className="absolute left-1/12 top-0 bottom-0 w-px bg-zinc-200/20 hidden md:block" />
-      <div className="absolute right-1/12 top-0 bottom-0 w-px bg-zinc-200/20 hidden md:block" />
+      {/* Right Background (App Theme) */}
+      <div className="absolute inset-0 bg-[#FAF6EE]" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          
-          {/* Left Hero Column: Massive Bold Typography with custom underlines */}
-          <div className="lg:col-span-7 text-left flex flex-col justify-center">
-            <motion.h1 
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
-              className="font-sans text-5xl sm:text-6xl lg:text-[4.75rem] font-[800] leading-[1.05] tracking-tight text-zinc-950 flex flex-wrap gap-x-[0.22em] gap-y-1 select-none"
+      {/* Left Background */}
+      <div className="absolute top-0 left-0 w-[60%] h-full bg-gradient-to-r from-[#e8e4d9] from-70% to-transparent" />
+
+      {/* Circles Layer */}
+      <div className="absolute top-[40%] left-[25%] w-[20vw] h-[20vw] rounded-full bg-zinc-300/60 mix-blend-multiply" />
+      <div className="absolute top-[25%] left-[35%] w-[28vw] h-[28vw] rounded-full bg-zinc-400/50 mix-blend-multiply" />
+      <div className="absolute top-[20%] left-[50%] w-[32vw] h-[32vw] rounded-full bg-zinc-500/40 mix-blend-multiply" />
+      <div className="absolute top-[25%] left-[65%] w-[35vw] h-[35vw] rounded-full bg-zinc-400/50 mix-blend-multiply" />
+      <div className="absolute top-[40%] left-[75%] w-[38vw] h-[38vw] rounded-full bg-zinc-300/60 mix-blend-multiply" />
+
+      {/* Typography Layer */}
+      <div className="absolute inset-0 flex flex-col items-center justify-end pb-32 md:pb-40 z-20 text-zinc-950 px-4">
+        <h1 className="font-bold leading-[0.95] tracking-tight text-5xl md:text-6xl lg:text-7xl flex flex-wrap justify-center text-center pointer-events-none mb-4">
+          {characters.map((char, index) => (
+            <motion.span
+              key={index}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ 
+                duration: 0.15, 
+                delay: index * 0.04, 
+                ease: "linear" 
+              }}
             >
-              {heroWords.map((word, idx) => (
-                <motion.span
-                  key={idx}
-                  variants={wordVariants}
-                  className="relative inline-block"
-                >
-                  {word.isStyled && (
-                    <motion.span
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      transition={{ 
-                        duration: 0.8, 
-                        delay: 0.6 + (idx * 0.1), 
-                        ease: [0.83, 0, 0.17, 1] 
-                      }}
-                      className="absolute bottom-[0.05em] left-[-0.1em] right-[-0.1em] h-[1.1em] bg-zinc-950 origin-left rounded-sm z-[-1]"
-                    />
-                  )}
-                  {word.isStyled ? (
-                    <motion.span 
-                      initial={{ color: "#09090b" }}
-                      animate={{ color: "#ffffff" }}
-                      transition={{ duration: 0.3, delay: 0.8 + (idx * 0.1) }}
-                      className="relative z-10 px-1"
-                    >
-                      {word.text}
-                    </motion.span>
-                  ) : (
-                    <span>{word.text}</span>
-                  )}
-                </motion.span>
-              ))}
-            </motion.h1>
-          </div>
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </h1>
+        
+        <motion.p 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+          className="text-lg md:text-xl text-zinc-700 max-w-2xl text-center mb-8 font-medium pointer-events-none"
+        >
+          An agentic research companion fit for your needs
+        </motion.p>
 
-          {/* Right Column: Editorial Lora Serif description */}
-          <div className="lg:col-span-5 flex flex-col justify-start lg:pt-4 space-y-8">
-            <p className="font-serif text-xl sm:text-2xl text-zinc-800 leading-relaxed font-[400]">
-              GeneralLanguage gives you the tools to explore complex ideas without getting lost. We build interactive playgrounds, smart study aids, and direct interfaces so you can stop wrestling with platforms and start actually learning.
-            </p>
-          </div>
-
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="flex flex-col sm:flex-row items-center gap-4 z-30"
+        >
+          <a href="#download" className="flex items-center gap-2 px-8 py-3 bg-zinc-950 text-white rounded-full font-medium hover:bg-zinc-800 transition-colors shadow-lg shadow-zinc-950/20">
+            <Download size={18} />
+            Download
+          </a>
+          <a href="#cosmiwise" className="flex items-center gap-2 px-8 py-3 bg-transparent border border-zinc-300 text-zinc-900 rounded-full font-medium hover:bg-zinc-100 transition-colors">
+            Learn more
+            <ArrowRight size={18} />
+          </a>
+        </motion.div>
       </div>
     </div>
   );
 }
+
 
