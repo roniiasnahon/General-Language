@@ -1,4 +1,23 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ais-pre-3i7cnmr3zq3e43tln5umqb-565053581419.asia-east1.run.app/sitemap.xml
+# Specifically welcoming AI/LLM bots
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OmgiliBot
+Allow: /
+
+Sitemap: https://genlang.vercel.app/sitemap.xml
