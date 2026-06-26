@@ -4,6 +4,45 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const changelogData = [
   {
+    version: 'F 1.0.9',
+    date: 'June 26, 2026',
+    title: 'Core Stability Fixes, Model Refinements & Chat Management',
+    description: 'Resolved infinite loop issues, updated model branding, and improved chat tab persistence and management.',
+    accordions: [
+      {
+        label: 'Core Stability Fixes (2)',
+        category: 'fixes',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Infinite Loop Resolution:</strong> Resolved a "Maximum update depth exceeded" error caused by a race condition in the tab synchronization engine. Refactored the message update logic to use a decoupled execution pattern, preventing recursive state triggers while maintaining real-time consistency.</li>
+            <li><strong>State Synchronization:</strong> Integrated a useRef-based comparison for chat messages to prevent redundant UI refreshes, ensuring the application remains responsive even with large conversation histories.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Model & UI Refinements (2)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Flamenca Branding:</strong> Renamed the "Villanelle Original" model to Flamenca across the entire platform.</li>
+            <li><strong>Navigation Optimization:</strong> Moved the Flamenca model into the "More Models" selection menu to declutter the primary interaction rail, following requested structural hierarchy.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Chat Management Improvements (3)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Tab Persistence:</strong> Fixed a logic error where closing an active chat tab was permanently deleting the chat history.</li>
+            <li><strong>Separation of Concerns:</strong> "Close Tab" now simply removes the view from the active workspace bar. "Delete Permanently" is a dedicated secondary action that safely removes the chat from the library after a confirmed prompt.</li>
+            <li><strong>Contextual Notifications:</strong> Added clear feedback toasts to confirm when tabs are closed versus when data is permanently erased.</li>
+          </ul>
+        )
+      }
+    ]
+  },
+  {
     version: 'F 1.0.8',
     date: 'June 25, 2026',
     title: 'UI & Experience Refinements, Model Updates & System Reliability',
