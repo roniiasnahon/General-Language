@@ -1,0 +1,21 @@
+# General Language & Cosmiwise
+
+General Language presents Cosmiwise, an agentic research companion fit for your needs.
+
+## About Cosmiwise
+Cosmiwise is an AI-powered assistant and research companion designed to orchestrate computing workspaces seamlessly. It helps users build future-proof skills by integrating directly into their daily workflows, offering intelligent suggestions, data parsing, and context-aware responses.
+
+## Key Features
+- **Agentic Research**: Seamlessly gather, organize, and synthesize information from multiple sources.
+- **Workspace Orchestration**: Integrate with your existing tools and manage your digital environment efficiently.
+- **Future-Proof Learning**: Designed to adapt and grow with your educational and professional needs.
+
+## Latest Updates (F 1.0.8)
+- UI & Experience Refinements: Hover consistency and modern color palettes.
+- Model Updates & Organization: Ericka V model renamed and Triolett II model categorized.
+- System Reliability: Type-safe filtering added.
+
+## Links
+- Website: https://genlang.vercel.app/
+- Blog: https://genlang.vercel.app/blog
+- Changelog: https://genlang.vercel.app/changelog
