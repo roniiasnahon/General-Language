@@ -10,7 +10,7 @@ const changelogData = [
     description: 'Significant backend modularization, Cloud Run caching compliance, centralized error handling, and robust state management optimizations.',
     accordions: [
       {
-        label: 'Architecture & Backend Refactoring (2)',
+        label: 'Architecture & Backend Refactoring (1)',
         category: 'improvements',
         content: (
           <ul className="list-disc pl-4 space-y-2">
