@@ -4,6 +4,56 @@ import { motion, AnimatePresence } from 'motion/react';
 
 const changelogData = [
   {
+    version: 'F 1.1.0',
+    date: 'June 27, 2026',
+    title: 'Architecture Refactoring, State Management & UI Cleanups',
+    description: 'Significant backend modularization, Cloud Run caching compliance, centralized error handling, and robust state management optimizations.',
+    accordions: [
+      {
+        label: 'Architecture & Backend Refactoring (2)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Modularization and Code Organization:</strong> Refactored the backend into a clean, modular structure. Extracted logic into <code>/src/api/routes/</code>, <code>/src/api/services/ai.ts</code>, <code>/src/api/services/storage.ts</code>, and <code>/src/api/utils/file-parsers.ts</code> making the codebase easier to navigate and maintain.</li>
+            <li><strong>Statelessness and Ephemeral Caching:</strong> Migrated the caching layer for Cloud Run compatibility. Replaced in-memory Map objects and local filesystem caches with Firestore and Cloudflare R2 for all persistent storage and caching.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Security, Error Handling & Validation (3)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Security and Secrets Management:</strong> Removed hardcoded fallback API keys in the source code. Enforced that all secrets are loaded dynamically via <code>process.env</code> for secure infrastructure management.</li>
+            <li><strong>Centralized Error Handling:</strong> Introduced centralized Express error-handling middleware to ensure all API failures return standardized JSON responses and log cleanly for debugging.</li>
+            <li><strong>Input Validation:</strong> Integrated Zod schema validation to strictly validate payloads coming from AI models and client requests, replacing manual parsing fallbacks.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'Performance & State Management Patches (4)',
+        category: 'fixes',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Optimized Auto-Save:</strong> Updated mechanism to correctly capture the latest local editor state (title and content) and prevent synchronization lags.</li>
+            <li><strong>Refactored Tab/Chat Synchronization:</strong> Improved <code>updateChatMessages</code> to intelligently check for state changes before triggering updates, avoiding unnecessary re-renders and potential race conditions.</li>
+            <li><strong>Intelligent Title/Content Sync:</strong> Updated the logic for renaming documents to synchronize <code>originalTitle</code>, <code>title</code>, and <code>content</code> to prevent incorrect overwrites during auto-saves.</li>
+            <li><strong>Hook Optimization:</strong> Investigated <code>useEffect</code> hooks within <code>MainChat.tsx</code> to ensure state refactors don't trigger infinite loops and behave predictably.</li>
+          </ul>
+        )
+      },
+      {
+        label: 'UI Cleanup (1)',
+        category: 'improvements',
+        content: (
+          <ul className="list-disc pl-4 space-y-2">
+            <li><strong>Minimalist Header:</strong> Removed the "Files, research assets, and citation repository" text from both the LibraryPanel component and main layout for a cleaner appearance.</li>
+          </ul>
+        )
+      }
+    ]
+  },
+  {
     version: 'F 1.0.9',
     date: 'June 26, 2026',
     title: 'Core Stability Fixes, Model Refinements & Chat Management',
