@@ -14,7 +14,6 @@ const changelogData = [
         category: 'improvements',
         content: (
           <ul className="list-disc pl-4 space-y-2">
-            <li><strong>Modularization and Code Organization:</strong> Refactored the backend into a clean, modular structure. Extracted logic into <code>/src/api/routes/</code>, <code>/src/api/services/ai.ts</code>, <code>/src/api/services/storage.ts</code>, and <code>/src/api/utils/file-parsers.ts</code> making the codebase easier to navigate and maintain.</li>
             <li><strong>Statelessness and Ephemeral Caching:</strong> Migrated the caching layer for Cloud Run compatibility. Replaced in-memory Map objects and local filesystem caches with Firestore and Cloudflare R2 for all persistent storage and caching.</li>
           </ul>
         )
